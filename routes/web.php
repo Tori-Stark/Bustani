@@ -33,13 +33,18 @@ Route::get('/single-product', function () {
     return view('client.products.show');
 });
 
+Route::get('/products', function () {
+    return view('client.products.index');
+});
+
 Route::get('/admin', function (){
     return view('admin.dashboard');
-});
+})->middleware('role:admin');
 
 // Route::get('/products', 'App\Http\Controllers\ProductController@index');
 
 // Route::get('/products/{id}', 'App\Http\Controllers\ProductController@show');
 
-Route::resource('products', \App\Http\Controllers\ProductController::class);
+Route::resource('products-admin', \App\Http\Controllers\ProductController::class);
+
 

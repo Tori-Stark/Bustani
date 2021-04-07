@@ -18,6 +18,9 @@ class ProductController extends Controller
     {
         $product = Product::all();
         return view('client.products.index')->with('product', $product);
+
+        $data = Product::all();
+        return view('productDetails',['productDetail', $data]);
     }
 
     /**
