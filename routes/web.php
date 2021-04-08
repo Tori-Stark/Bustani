@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -39,6 +40,17 @@ Route::get('/admin', function (){
 });
 
 Route::resource('products', App\Http\Controllers\ProductController::class);
+
+
+Route::prefix('admin')->group(function () {
+    Route::resource('/products', 'App\Http\Controllers\ProductController');
+
+});
+
+
+
+// Route::get('/products', 'App\Http\Controllers\ProductController@index');
+
 
 
 // Route::get('/products/{id}', 'App\Http\Controllers\ProductController@show');

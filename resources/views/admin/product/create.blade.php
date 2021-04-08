@@ -9,7 +9,7 @@
 
             <form action="/products" method="post" enctype="multipart/form-data">
 
-                @include('product.form')
+                @include('admin.product.form')
                 <button class="btn btn-success">Add</button>
 
             </form>

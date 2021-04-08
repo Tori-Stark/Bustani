@@ -15,19 +15,19 @@
   <!--favicon-->
   <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
   <!-- Vector CSS -->
-  <link href="assets/plugins/vectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet"/>
+  <link href="<?php echo e(asset("assets/plugins/vectormap/jquery-jvectormap-2.0.2.css")); ?>" rel="stylesheet"/>
   <!-- simplebar CSS-->
-  <link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet"/>
+  <link href="<?php echo e(asset("assets/plugins/simplebar/css/simplebar.css")); ?>" rel="stylesheet"/>
   <!-- Bootstrap core CSS-->
-  <link href="assets/css/admin/bootstrap.min.css" rel="stylesheet"/>
+  <link href="<?php echo e(asset("assets/css/admin/bootstrap.min.css")); ?>" rel="stylesheet"/>
   <!-- animate CSS-->
-  <link href="assets/css/admin/animate.css" rel="stylesheet" type="text/css"/>
+  <link href="<?php echo e(asset("assets/css/admin/animate.css" )); ?>" rel="stylesheet" type="text/css"/>
   <!-- Icons CSS-->
-  <link href="assets/css/icons.css" rel="stylesheet" type="text/css"/>
+  <link href="<?php echo e(asset("assets/css/icons.css" )); ?>" rel="stylesheet" type="text/css"/>
   <!-- Sidebar CSS-->
-  <link href="assets/css/sidebar-menu.css" rel="stylesheet"/>
+  <link href="<?php echo e(asset("assets/css/sidebar-menu.css")); ?>" rel="stylesheet"/>
   <!-- Custom Style-->
-  <link href="assets/css/app-style.css" rel="stylesheet"/>
+  <link href="<?php echo e(asset("assets/css/app-style.css")); ?>" rel="stylesheet"/>
 
 </head>
 
@@ -39,7 +39,7 @@
   <!--Start sidebar-wrapper-->
    <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
      <div class="brand-logo">
-      <a href="admin.blade.php">
+      <a href="/admin">
        <img src="assets/images/logo.jpg" class="logo-icon" alt="logo icon">
        <h5 class="logo-text">Bustani Admin</h5>
      </a>
@@ -53,7 +53,7 @@
       </li>
 
       <li>
-        <a href="<?php echo e(asset('products')); ?>">
+        <a href="<?php echo e(asset('products-admin')); ?>">
           <i class="zmdi zmdi-invert-colors"></i> <span>Products</span>
         </a>
       </li>
@@ -245,24 +245,24 @@
   </div><!--End wrapper-->
 
   <!-- Bootstrap core JavaScript-->
-  <script src="assets/js/admin/jquery.min.js"></script>
-  <script src="assets/js/admin/popper.min.js"></script>
-  <script src="assets/js/admin/bootstrap.min.js"></script>
+  <script src="<?php echo e(asset("assets/js/admin/jquery.min.js")); ?>"></script>
+  <script src="<?php echo e(asset("assets/js/admin/popper.min.js")); ?>"></script>
+  <script src="<?php echo e(asset("assets/js/admin/bootstrap.min.js")); ?>"></script>
 
  <!-- simplebar js -->
-  <script src="assets/plugins/simplebar/js/simplebar.js"></script>
+  <script src="<?php echo e(asset("assets/plugins/simplebar/js/simplebar.js")); ?>"></script>
   <!-- sidebar-menu js -->
-  <script src="assets/js/sidebar-menu.js"></script>
+  <script src="<?php echo e(asset("assets/js/sidebar-menu.js")); ?>"></script>
   <!-- loader scripts -->
-  <script src="assets/js/jquery.loading-indicator.js"></script>
+  <script src="<?php echo e(asset("assets/js/jquery.loading-indicator.js")); ?>"></script>
   <!-- Custom scripts -->
-  <script src="assets/js/app-script.js"></script>
+  <script src="<?php echo e(asset("assets/js/app-script.js")); ?>"></script>
   <!-- Chart js -->
 
-  <script src="assets/plugins/Chart.js/Chart.min.js"></script>
+  <script src="<?php echo e(asset("assets/plugins/Chart.js/Chart.min.js")); ?>"></script>
 
   <!-- Index js -->
-  <script src="assets/js/index.js"></script>
+  <script src="<?php echo e(asset("assets/js/index.js")); ?>"></script>
 
 <?php echo $__env->yieldContent('script'); ?>
 </body>

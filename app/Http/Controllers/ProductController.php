@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
@@ -17,8 +18,10 @@ class ProductController extends Controller
     public function index()
     {
         $product = Product::all();
-        return view('client.products.index')->with('product', $product);
+        return view('admin.product.index')->with('product', $product);
+
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -28,7 +31,9 @@ class ProductController extends Controller
     public function create()
     {
        $product = new Product();
+
        return view('client.products.create', compact('product'));
+
     }
 
     /**
