@@ -31,7 +31,9 @@ class ProductController extends Controller
     public function create()
     {
        $product = new Product();
-       return view('admin.product.create', compact('product'));
+
+       return view('client.products.create', compact('product'));
+
     }
 
     /**
@@ -58,7 +60,7 @@ class ProductController extends Controller
             $file = $request->file('product_image');
             $extension = $file->getClientOriginalExtension();
             $filename = time(). '.' .$extension;
-            $file->move('storage/product-images', $filename);
+            $file->move(public_path().'\assets\images\product-images', $filename);
             $product->product_image = $filename;
         }else{
             $product->product_image = '';
@@ -67,7 +69,7 @@ class ProductController extends Controller
         $product->save();
 
         Session::put('Success', 'The product has been added successfully');
-        return redirect('/product')->with('success', 'Product created!');
+        return redirect('/products');
     }
 
     /**
@@ -78,7 +80,7 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        return view('product.show', compact('product'));
+        return view('products.show', compact('product'));
     }
 
     /**
@@ -89,7 +91,7 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        return view('product.edit', compact('product'));
+        return view('client.products.edit', compact('product'));
     }
 
     /**
@@ -117,7 +119,7 @@ class ProductController extends Controller
         $product->update();
 
         Session::put('Success', 'The product has been edited successfully');
-        return redirect('/product');
+        return redirect('/products');
     }
 
     /**
@@ -130,6 +132,6 @@ class ProductController extends Controller
     public function destroy(Product $product)
     {
         $product ->delete();
-        return response()->json(['message' => "Product deleted successfully"], 204);
+        return redirect('/products');
     }
 }

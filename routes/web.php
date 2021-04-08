@@ -23,7 +23,7 @@ Route::get('/', function () {
 */
 
 Auth::routes();
-Route::resource('profile', \App\Http\Controllers\UserController::class);
+Route::resource('profile', \App\Http\Controllers\UserController::class)->middleware(('auth'));
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 //Route::put('/profile.{user}', [App\Http\Controllers\UserController::class, 'update'])->middleware('auth')
 
@@ -39,6 +39,8 @@ Route::get('/admin', function (){
     return view('admin.dashboard');
 });
 
+Route::resource('products', App\Http\Controllers\ProductController::class);
+
 
 Route::prefix('admin')->group(function () {
     Route::resource('/products', 'App\Http\Controllers\ProductController');
@@ -49,6 +51,7 @@ Route::resource('roles', \App\Http\Controllers\RoleController::class)->middlewar
 Route::resource('permissions', \App\Http\Controllers\PermissionController::class)->middleware('role:admin');
 
 // Route::get('/products', 'App\Http\Controllers\ProductController@index');
+
 
 
 // Route::get('/products/{id}', 'App\Http\Controllers\ProductController@show');
