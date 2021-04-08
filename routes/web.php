@@ -22,7 +22,7 @@ Route::get('/', function () {
 */
 
 Auth::routes();
-Route::resource('profile', \App\Http\Controllers\UserController::class);
+Route::resource('profile', \App\Http\Controllers\UserController::class)->middleware(('auth'));
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 //Route::put('/profile.{user}', [App\Http\Controllers\UserController::class, 'update'])->middleware('auth')
 
@@ -38,7 +38,7 @@ Route::get('/admin', function (){
     return view('admin.dashboard');
 });
 
-Route::get('/products', 'App\Http\Controllers\ProductController@index');
+Route::resource('products', App\Http\Controllers\ProductController::class);
 
 
 // Route::get('/products/{id}', 'App\Http\Controllers\ProductController@show');
