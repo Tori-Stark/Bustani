@@ -1,9 +1,9 @@
 {{-- \resources\views\users\create.blade.php --}}
-@extends('layouts.admin')
+@extends('admin.admin')
 
 @section('title', '| Add User')
 
-@section('content')
+@section('body')
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-8">

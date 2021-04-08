@@ -1,9 +1,9 @@
 {{--<p class="card-category" href="users" style="text-align: center; font-size: xx-large"> Number of Users => {{ $userCount }}</p>--}}
 
 {{--<h3 class="card-title">{{ $userCount }}</h3>--}}
-@extends('layouts.admin')
+@extends('admin.admin')
 @section('title')
-    Users | Jah Dishes
+    Users | Bustani
 @endsection
 @section('body')
     <div id="page-wrapper">

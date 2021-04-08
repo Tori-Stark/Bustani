@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/c9d6ff32-4913-4ba1-9f03-0406e2833102/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/Haslito",
+    "appService.deploySubpath": "."
+}

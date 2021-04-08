@@ -1,5 +1,5 @@
 {{-- \resources\views\roles\index.blade.php --}}
-@extends('layouts.admin')
+@extends('admin.admin')
 
 @section('title', '| Roles')
 

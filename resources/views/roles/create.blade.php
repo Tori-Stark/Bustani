@@ -1,8 +1,8 @@
-@extends('layouts.master')
+@extends('admin.master')
 
 @section('title', '| Add Role')
 
-@section('content')
+@section('body')
 
     <div class='col-lg-4 col-lg-offset-4'>
 

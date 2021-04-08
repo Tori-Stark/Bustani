@@ -1,6 +1,6 @@
-@extends('layouts.admin')
+@extends('admin.admin')
 @section('title')
-    Edit Users | Jah Dishes
+    Edit Users | Bustani
 @endsection
 @section('body')
     <div id="page-wrapper">

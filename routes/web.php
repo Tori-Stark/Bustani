@@ -45,7 +45,8 @@ Route::prefix('admin')->group(function () {
 
 });
 
-
+Route::resource('roles', \App\Http\Controllers\RoleController::class)->middleware('role:admin');
+Route::resource('permissions', \App\Http\Controllers\PermissionController::class)->middleware('role:admin');
 
 // Route::get('/products', 'App\Http\Controllers\ProductController@index');
 
