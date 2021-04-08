@@ -16,7 +16,8 @@ class AddFieldsToUsers extends Migration
         Schema::table('users', function (Blueprint $table) {
             $table->string('city');
             $table->string('phone_number');
-            $table->string('profile_photo'); 
+            $table->string('profile_photo');
+            
         });
     }
 

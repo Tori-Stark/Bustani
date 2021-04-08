@@ -5,7 +5,8 @@
 <div class="container d-flex justify-content-center">
     <div class="card p-3 py-4">
         <div class="text-center"> <img src="<?php echo e(asset("assets/images/users/".Auth::user()->profile_photo)); ?>" width='100' class="rounded-circle">
-            <h3 class="mt-2"><?php echo e(Auth::user()->name); ?></h3>City: <span class="mt-1 clearfix"><?php echo e(Auth::user()->city); ?></span> Phone Number: <small class="mt-4"><?php echo e(Auth::user()->phone_number); ?></small>
+            <h3 class="mt-2"><?php echo e($user->name); ?></h3>City: <span class="mt-1 clearfix"><?php echo e($user->city); ?></span> Phone Number: <small class="mt-4"><?php echo e($user->phone_number); ?></small></br>
+            <a href=<?php echo e(route('profile.edit',$user)); ?> class="btn btn-primary" type="button"  >Edit Profile</a>
             <div class="social-buttons mt-5"> <button class="neo-button"><i class="fa fa-facebook fa-1x"></i> </button> <button class="neo-button"><i class="fa fa-linkedin fa-1x"></i></button> <button class="neo-button"><i class="fa fa-google fa-1x"></i> </button> <button class="neo-button"><i class="fa fa-youtube fa-1x"></i> </button> <button class="neo-button"><i class="fa fa-twitter fa-1x"></i> </button> </div>
         </div>
     </div>

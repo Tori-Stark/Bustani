@@ -39,7 +39,7 @@
   <!--Start sidebar-wrapper-->
    <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
      <div class="brand-logo">
-      <a href="admin.blade.php">
+      <a href="/admin">
        <img src="assets/images/logo.jpg" class="logo-icon" alt="logo icon">
        <h5 class="logo-text">Bustani Admin</h5>
      </a>
@@ -53,7 +53,7 @@
       </li>
 
       <li>
-        <a href="<?php echo e(asset('products')); ?>">
+        <a href="<?php echo e(asset('products-admin')); ?>">
           <i class="zmdi zmdi-invert-colors"></i> <span>Products</span>
         </a>
       </li>

@@ -37,6 +37,42 @@
           <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
           <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
           <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <?php if(auth()->guard()->guest()): ?>
+                            <?php if(Route::has('login')): ?>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="<?php echo e(route('login')); ?>"><?php echo e(__('Login')); ?></a>
+                                </li>
+                            <?php endif; ?>
+                            
+                            <?php if(Route::has('register')): ?>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="<?php echo e(route('register')); ?>"><?php echo e(__('Register')); ?></a>
+                                </li>
+                            <?php endif; ?>
+                        <?php else: ?>
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" style="color:#82ae46" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <?php echo e(Auth::user()->name); ?>
+
+                                </a>
+
+                                <div class="dropdown-menu " aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/profile">Profile</a>
+                                <a class="dropdown-item" href="/profile">My Products</a>
+                                    <a class="dropdown-item" href="<?php echo e(route('logout')); ?>"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        <?php echo e(__('Logout')); ?>
+
+                                    </a>
+                                    
+
+                                    <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" class="d-none">
+                                        <?php echo csrf_field(); ?>
+                                    </form>
+                                </div>
+                            </li>
+                        <?php endif; ?>
           
         </ul>
       </div>

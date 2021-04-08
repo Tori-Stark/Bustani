@@ -15,19 +15,19 @@
   <!--favicon-->
   <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
   <!-- Vector CSS -->
-  <link href="assets/plugins/vectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet"/>
+  <link href="{{ asset("assets/plugins/vectormap/jquery-jvectormap-2.0.2.css") }}" rel="stylesheet"/>
   <!-- simplebar CSS-->
-  <link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet"/>
+  <link href="{{ asset("assets/plugins/simplebar/css/simplebar.css") }}" rel="stylesheet"/>
   <!-- Bootstrap core CSS-->
-  <link href="assets/css/admin/bootstrap.min.css" rel="stylesheet"/>
+  <link href="{{ asset("assets/css/admin/bootstrap.min.css") }}" rel="stylesheet"/>
   <!-- animate CSS-->
-  <link href="assets/css/admin/animate.css" rel="stylesheet" type="text/css"/>
+  <link href="{{ asset("assets/css/admin/animate.css" ) }}" rel="stylesheet" type="text/css"/>
   <!-- Icons CSS-->
-  <link href="assets/css/icons.css" rel="stylesheet" type="text/css"/>
+  <link href="{{ asset("assets/css/icons.css" ) }}" rel="stylesheet" type="text/css"/>
   <!-- Sidebar CSS-->
-  <link href="assets/css/sidebar-menu.css" rel="stylesheet"/>
+  <link href="{{ asset("assets/css/sidebar-menu.css") }}" rel="stylesheet"/>
   <!-- Custom Style-->
-  <link href="assets/css/app-style.css" rel="stylesheet"/>
+  <link href="{{ asset("assets/css/app-style.css") }}" rel="stylesheet"/>
 
 </head>
 
@@ -39,7 +39,7 @@
   <!--Start sidebar-wrapper-->
    <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
      <div class="brand-logo">
-      <a href="admin.blade.php">
+      <a href="/admin">
        <img src="assets/images/logo.jpg" class="logo-icon" alt="logo icon">
        <h5 class="logo-text">Bustani Admin</h5>
      </a>
@@ -52,53 +52,55 @@
         </a>
       </li>
 
-      <li>
-        <a href="{{ asset('products') }}">
-          <i class="zmdi zmdi-invert-colors"></i> <span>Products</span>
-        </a>
-      </li>
-
-      <li>
-        <a href="forms.html">
-          <i class="zmdi zmdi-format-list-bulleted"></i> <span>Forms</span>
-        </a>
-      </li>
-
-      <li>
-        <a href="tables.html">
-          <i class="zmdi zmdi-grid"></i> <span>Tables</span>
-        </a>
-      </li>
-
-      <li>
-        <a href="calendar.html">
-          <i class="zmdi zmdi-calendar-check"></i> <span>Calendar</span>
-          <small class="badge float-right badge-light">New</small>
-        </a>
-      </li>
-
-      <li>
-        <a href="profile.html">
-          <i class="zmdi zmdi-face"></i> <span>Profile</span>
-        </a>
-      </li>
-
-      <li>
-        <a href="login.html" target="_blank">
-          <i class="zmdi zmdi-lock"></i> <span>Login</span>
-        </a>
-      </li>
-
        <li>
-        <a href="register.html" target="_blank">
-          <i class="zmdi zmdi-account-circle"></i> <span>Registration</span>
+           <a href="{{  asset('users') }}">
+               <i class="zmdi zmdi-folder-person"></i> <span>User Management</span>
+           </a>
+       </li>
+
+      <li>
+        <a href="{{ asset('products-admin') }}">
+          <i class="zmdi zmdi-shopping-basket"></i> <span>Products</span>
         </a>
       </li>
 
-      <li class="sidebar-header">LABELS</li>
-      <li><a href="javaScript:void();"><i class="zmdi zmdi-coffee text-danger"></i> <span>Important</span></a></li>
-      <li><a href="javaScript:void();"><i class="zmdi zmdi-chart-donut text-success"></i> <span>Warning</span></a></li>
-      <li><a href="javaScript:void();"><i class="zmdi zmdi-share text-info"></i> <span>Information</span></a></li>
+
+
+{{--      <li>--}}
+{{--        <a href="tables.html">--}}
+{{--          <i class="zmdi zmdi-grid"></i> <span>Tables</span>--}}
+{{--        </a>--}}
+{{--      </li>--}}
+
+{{--      <li>--}}
+{{--        <a href="calendar.html">--}}
+{{--          <i class="zmdi zmdi-calendar-check"></i> <span>Calendar</span>--}}
+{{--          <small class="badge float-right badge-light">New</small>--}}
+{{--        </a>--}}
+{{--      </li>--}}
+
+{{--      <li>--}}
+{{--        <a href="profile.html">--}}
+{{--          <i class="zmdi zmdi-face"></i> <span>Profile</span>--}}
+{{--        </a>--}}
+{{--      </li>--}}
+
+{{--      <li>--}}
+{{--        <a href="login.html" target="_blank">--}}
+{{--          <i class="zmdi zmdi-lock"></i> <span>Login</span>--}}
+{{--        </a>--}}
+{{--      </li>--}}
+
+{{--       <li>--}}
+{{--        <a href="register.html" target="_blank">--}}
+{{--          <i class="zmdi zmdi-account-circle"></i> <span>Registration</span>--}}
+{{--        </a>--}}
+{{--      </li>--}}
+
+{{--      <li class="sidebar-header">LABELS</li>--}}
+{{--      <li><a href="javaScript:void();"><i class="zmdi zmdi-coffee text-danger"></i> <span>Important</span></a></li>--}}
+{{--      <li><a href="javaScript:void();"><i class="zmdi zmdi-chart-donut text-success"></i> <span>Warning</span></a></li>--}}
+{{--      <li><a href="javaScript:void();"><i class="zmdi zmdi-share text-info"></i> <span>Information</span></a></li>--}}
 
     </ul>
 
@@ -245,24 +247,24 @@
   </div><!--End wrapper-->
 
   <!-- Bootstrap core JavaScript-->
-  <script src="assets/js/admin/jquery.min.js"></script>
-  <script src="assets/js/admin/popper.min.js"></script>
-  <script src="assets/js/admin/bootstrap.min.js"></script>
+  <script src="{{ asset("assets/js/admin/jquery.min.js") }}"></script>
+  <script src="{{ asset("assets/js/admin/popper.min.js") }}"></script>
+  <script src="{{ asset("assets/js/admin/bootstrap.min.js") }}"></script>
 
  <!-- simplebar js -->
-  <script src="assets/plugins/simplebar/js/simplebar.js"></script>
+  <script src="{{ asset("assets/plugins/simplebar/js/simplebar.js") }}"></script>
   <!-- sidebar-menu js -->
-  <script src="assets/js/sidebar-menu.js"></script>
+  <script src="{{ asset("assets/js/sidebar-menu.js") }}"></script>
   <!-- loader scripts -->
-  <script src="assets/js/jquery.loading-indicator.js"></script>
+  <script src="{{ asset("assets/js/jquery.loading-indicator.js") }}"></script>
   <!-- Custom scripts -->
-  <script src="assets/js/app-script.js"></script>
+  <script src="{{ asset("assets/js/app-script.js") }}"></script>
   <!-- Chart js -->
 
-  <script src="assets/plugins/Chart.js/Chart.min.js"></script>
+  <script src="{{ asset("assets/plugins/Chart.js/Chart.min.js") }}"></script>
 
   <!-- Index js -->
-  <script src="assets/js/index.js"></script>
+  <script src="{{ asset("assets/js/index.js") }}"></script>
 
 @yield('script')
 </body>

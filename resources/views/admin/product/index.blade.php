@@ -1,5 +1,6 @@
 
 @extends('admin.admin')
+
 @section('title')
     Products | Bustani
 @endsection
@@ -57,7 +58,7 @@
                     </table>
                 </div>
             </div>
-            <a href="{{ route('product.create') }}" class="btn btn-primary">Add Product</a>
+            <a href="{{ route('products.create') }}" class="btn btn-primary">Add Product</a>
         </div>
         @endsection
 
