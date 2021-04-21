@@ -14,9 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
 /*Route::get('/profile', function () {
     return view('profile.show');
 });
@@ -53,6 +54,8 @@ Route::prefix('admin')->group(function () {
 
 Route::resource('roles', \App\Http\Controllers\RoleController::class)->middleware('role:admin');
 Route::resource('permissions', \App\Http\Controllers\PermissionController::class)->middleware('role:admin');
+
+Route::get('/', 'App\Http\Controllers\ProductController@viewProduct');
 
 // Route::get('/products', 'App\Http\Controllers\ProductController@index');
 

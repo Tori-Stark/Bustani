@@ -134,4 +134,10 @@ class ProductController extends Controller
         $product ->delete();
         return redirect('/products');
     }
+
+    function viewProduct(Product $data){
+        $data = Product::all();
+        return view('welcome',compact('data'));
+    }
+
 }
