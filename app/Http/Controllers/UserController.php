@@ -1,7 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use Auth;
+
+
+use Illuminate\Support\Facades\Auth;
+
 
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -16,7 +19,7 @@ class UserController extends Controller
     public function index()
     {
         $user=Auth::user();
-        return view('profile.show',compact('user'));
+        return view('seller.profile.show',compact('user'));
     }
 
   
@@ -32,7 +35,7 @@ class UserController extends Controller
     public function show(User $user)
     {
         $user=Auth::user();
-        return view('profile.show', compact('user'));
+        return view('seller.profile.show', compact('user'));
     }
 
     /**

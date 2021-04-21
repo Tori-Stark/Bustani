@@ -17,38 +17,53 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-/*Route::get('/profile', function () {
-    return view('profile.show');
-});
-*/
+
 
 Auth::routes();
-Route::resource('profile', \App\Http\Controllers\UserController::class)->middleware(('auth'));
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+/*//Route::resource('profile', \App\Http\Controllers\UserController::class)->middleware(('auth'));
+
 //Route::put('/profile.{user}', [App\Http\Controllers\UserController::class, 'update'])->middleware('auth')
 
 //Create admin middleware group for products page in admin
 // Route::resource('products', \App\Http\Controllers\ProductController::class)->middleware('auth');
 
 //Test routes for products page in client
-Route::get('/single-product', function () {
-    return view('client.products.show');
-});
-
-Route::get('/admin', function (){
+*/
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+/*Route::get('/admin', function (){
     return view('admin.dashboard');
 });
+*/
 
-Route::resource('products', App\Http\Controllers\ProductController::class);
+
 
 
 /*Route::prefix('admin')->group(function () {
     Route::resource('/products', 'App\Http\Controllers\ProductController');
 
 });
+Route::resource('products', App\Http\Controllers\ProductController::class);
+Route::resource('roles', \App\Http\Controllers\RoleController::class)->middleware('role:admin');
+Route::resource('permissions', \App\Http\Controllers\PermissionController::class)->middleware('role:admin');
 */
 
 
+Route::group(['middleware'=>'auth'], function() {
+   
+    Route::group(['prefix'=>'user'], function() {
+Route::resource('profile', \App\Http\Controllers\UserController::class);
+Route::resource('products', App\Http\Controllers\ProductController::class);
+    });
+
+Route::group(['middleware'=>'role:admin', 'prefix'=>'admin'],function (){
+    Route::get('/dashboard', function (){
+        return view('admin.dashboard');
+    });
+    Route::resource('roles', \App\Http\Controllers\RoleController::class);
+    Route::resource('permissions', \App\Http\Controllers\PermissionController::class);
+});
+
+});
 
 // Route::get('/products', 'App\Http\Controllers\ProductController@index');
 
