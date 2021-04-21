@@ -42,10 +42,11 @@ Route::get('/admin', function (){
 Route::resource('products', App\Http\Controllers\ProductController::class);
 
 
-Route::prefix('admin')->group(function () {
+/*Route::prefix('admin')->group(function () {
     Route::resource('/products', 'App\Http\Controllers\ProductController');
 
 });
+*/
 
 
 
