@@ -30,7 +30,7 @@
             </div>
             <div class="col-12 col-lg-6 col-xl-3 border-light">
                 <div class="card-body">
-                    <h5 class="text-white mb-0">6200 <span class="float-right"><i class="fa fa-eye"></i></span></h5>
+                    <h5 class="text-white mb-0"><?php echo e($userCount ?? ''); ?> <span class="float-right"><i class="fa fa-eye"></i></span></h5>
                     <div class="progress my-3" style="height:3px;">
                         <div class="progress-bar" style="width:55%"></div>
                     </div>
@@ -187,71 +187,71 @@
                         <th>Shipping</th>
                     </tr>
                     </thead>
-                    <tbody><tr>
-                        <td>Iphone 5</td>
-                        <td><img src="https://via.placeholder.com/110x110" class="product-img" alt="product img"></td>
-                        <td>#9405822</td>
-                        <td>$ 1250.00</td>
-                        <td>03 Aug 2017</td>
-                        <td><div class="progress shadow" style="height: 3px;">
-                                <div class="progress-bar" role="progressbar" style="width: 90%"></div>
-                            </div></td>
-                    </tr>
 
-                    <tr>
-                        <td>Earphone GL</td>
-                        <td><img src="https://via.placeholder.com/110x110" class="product-img" alt="product img"></td>
-                        <td>#9405820</td>
-                        <td>$ 1500.00</td>
-                        <td>03 Aug 2017</td>
-                        <td><div class="progress shadow" style="height: 3px;">
-                                <div class="progress-bar" role="progressbar" style="width: 60%"></div>
-                            </div></td>
-                    </tr>
 
-                    <tr>
-                        <td>HD Hand Camera</td>
-                        <td><img src="https://via.placeholder.com/110x110" class="product-img" alt="product img"></td>
-                        <td>#9405830</td>
-                        <td>$ 1400.00</td>
-                        <td>03 Aug 2017</td>
-                        <td><div class="progress shadow" style="height: 3px;">
-                                <div class="progress-bar" role="progressbar" style="width: 70%"></div>
-                            </div></td>
-                    </tr>
 
-                    <tr>
-                        <td>Clasic Shoes</td>
-                        <td><img src="https://via.placeholder.com/110x110" class="product-img" alt="product img"></td>
-                        <td>#9405825</td>
-                        <td>$ 1200.00</td>
-                        <td>03 Aug 2017</td>
-                        <td><div class="progress shadow" style="height: 3px;">
-                                <div class="progress-bar" role="progressbar" style="width: 100%"></div>
-                            </div></td>
-                    </tr>
 
-                    <tr>
-                        <td>Hand Watch</td>
-                        <td><img src="https://via.placeholder.com/110x110" class="product-img" alt="product img"></td>
-                        <td>#9405840</td>
-                        <td>$ 1800.00</td>
-                        <td>03 Aug 2017</td>
-                        <td><div class="progress shadow" style="height: 3px;">
-                                <div class="progress-bar" role="progressbar" style="width: 40%"></div>
-                            </div></td>
-                    </tr>
 
-                    <tr>
-                        <td>Clasic Shoes</td>
-                        <td><img src="https://via.placeholder.com/110x110" class="product-img" alt="product img"></td>
-                        <td>#9405825</td>
-                        <td>$ 1200.00</td>
-                        <td>03 Aug 2017</td>
-                        <td><div class="progress shadow" style="height: 3px;">
-                                <div class="progress-bar" role="progressbar" style="width: 100%"></div>
-                            </div></td>
-                    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                     </tbody></table>
             </div>

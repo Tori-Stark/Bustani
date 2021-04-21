@@ -18,7 +18,7 @@ class ProductController extends Controller
     public function index()
     {
         $product = Product::all();
-        return view('admin.product.index')->with('product', $product);
+        return view('seller.products.index')->with('product', $product);
 
     }
 
@@ -32,7 +32,7 @@ class ProductController extends Controller
     {
        $product = new Product();
 
-       return view('client.products.create', compact('product'));
+       return view('seller.products.create', compact('product'));
 
     }
 
@@ -69,7 +69,7 @@ class ProductController extends Controller
         $product->save();
 
         Session::put('Success', 'The product has been added successfully');
-        return redirect('/products');
+        return redirect('/user/products');
     }
 
     /**
@@ -80,7 +80,7 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        return view('products.show', compact('product'));
+        return view('seller.products.show', compact('product'));
     }
 
     /**
@@ -91,7 +91,7 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        return view('client.products.edit', compact('product'));
+        return view('seller.products.edit', compact('product'));
     }
 
     /**
@@ -119,7 +119,7 @@ class ProductController extends Controller
         $product->update();
 
         Session::put('Success', 'The product has been edited successfully');
-        return redirect('/products');
+        return redirect('/user/products');
     }
 
     /**
@@ -132,6 +132,6 @@ class ProductController extends Controller
     public function destroy(Product $product)
     {
         $product ->delete();
-        return redirect('/products');
+        return redirect('/user/products');
     }
 }

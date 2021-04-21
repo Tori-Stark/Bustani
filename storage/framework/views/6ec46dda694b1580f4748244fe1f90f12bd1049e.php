@@ -29,9 +29,10 @@
           </div>
           <div class="row">
 
-              <div class="col-md-6 col-lg-3 ftco-animate">
+          <?php $__currentLoopData = $product; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $product): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+              <div class=" col-md-6 col-lg-3 ftco-animate">
                   <div class="product">
-                    <?php $__currentLoopData = $product; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $product): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                   
 
                       <a href="#" class="img-prod"><img class="img-fluid" src=<?php echo e(asset("assets/images/product-images/". $product->product_image)); ?> alt="Colorlib Template">
                           <div class="overlay"></div>
@@ -66,12 +67,13 @@
                           </div>
                       </div>
 
-                      <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                      
 
                   </div>
 
 
               </div>
+              <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
           </div>
           <div class="row mt-5">
         <div class="col text-center">
