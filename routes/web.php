@@ -37,18 +37,23 @@ Route::get('/single-product', function () {
 
 Route::get('/admin', function (){
     return view('admin.dashboard');
-});
+})->middleware('role:admin');
 
 Route::resource('products', App\Http\Controllers\ProductController::class);
 
 
 Route::prefix('admin')->group(function () {
-    Route::resource('/products', 'App\Http\Controllers\ProductController');
+    Route::resource('/products', 'App\Http\Controllers\ProductController')->middleware('role:admin');
 
 });
 
+//Route::prefix('admin')->group(function (){
+//    Route::resource('/products', 'App\Http\Controllers\ProductController');
+//});
+
 Route::resource('roles', \App\Http\Controllers\RoleController::class)->middleware('role:admin');
 Route::resource('permissions', \App\Http\Controllers\PermissionController::class)->middleware('role:admin');
+Route::resource('users', \App\Http\Controllers\UserAdminController::class)->middleware('role:admin');
 
 // Route::get('/products', 'App\Http\Controllers\ProductController@index');
 
