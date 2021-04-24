@@ -83,3 +83,11 @@ Route::get('/', 'App\Http\Controllers\ProductController@viewProduct');
 Route::get('/about', function () {
     return view('about');
 });
+
+Route::get('/contact-us', function () {
+    return view('contact');
+});
+
+Route::resource('/products', \App\Http\Controllers\Buyer\ProductController::class);
+
+

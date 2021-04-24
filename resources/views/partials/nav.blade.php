@@ -29,9 +29,9 @@
       <div class="collapse navbar-collapse" id="ftco-nav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active"><a href="/" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="/" class="nav-link">Products</a></li>
+          <li class="nav-item"><a href="/products" class="nav-link">Products</a></li>
           <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
-          <li class="nav-item"><a href="/" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="/contact-us" class="nav-link">Contact</a></li>
           @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
