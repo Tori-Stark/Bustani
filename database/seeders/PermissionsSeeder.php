@@ -39,21 +39,29 @@ class PermissionsSeeder extends Seeder
         $user = \App\Models\User::factory()->create([
             'name' => 'Example User',
             'email' => 'test@example.com',
-            'password' => '12345678',
+            'password' => bcrypt('12345678'),
+            'city' => 'Lost city',
+            'phone_number' => '+2547123456788',
         ]);
         $user->assignRole($admin);
 
         $user = \App\Models\User::factory()->create([
             'name' => 'Example Client',
             'email' => 'client@example.com',
-            'password' => '12345678',
+            'password' => bcrypt('12345678'),
+            'city' => 'Lost city',
+            'phone_number' => '+2547123456788',
+
         ]);
         $user->assignRole($client);
 
         $user = \App\Models\User::factory()->create([
             'name' => 'Example Seller User',
             'email' => 'seller@example.com',
-            'password' => '12345678',
+            'password' => bcrypt('12345678'),
+            'city' => 'Found city',
+            'phone_number' => '+2547123456788',
+
         ]);
         $user->assignRole($seller);
     }

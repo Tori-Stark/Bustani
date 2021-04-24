@@ -16,8 +16,8 @@
 {{--<h1 class="h1" style="color: #0e9f6e; text-align: center;">Users</h1>--}}
 <div class="page-header">
     <div>
-    <h1><i class="fa fa-users"></i> User Administration <a href="{{ route('roles.index') }}" class="btn btn-default pull-right">Roles</a>
-        <a href="{{ route('permissions.index') }}" class="btn btn-default pull-right">Permissions</a></h1>
+    <h1><i class="fa fa-users"></i> User Administration <a href="{{ route('roles.index') }}" class="btn btn-dark pull-right">Roles</a>
+        <a href="{{ route('permissions.index') }}" class="btn btn-dark pull-right">Permissions</a></h1>
     <hr>
 
 <div class="table-responsive">
