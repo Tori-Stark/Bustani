@@ -37,7 +37,9 @@ class PermissionsSeeder extends Seeder
 
         // create demo users
         $user = \App\Models\User::factory()->create([
+            
             'name' => 'Example User',
+            
             'email' => 'test@example.com',
             'password' => bcrypt('12345678'),
             'city' => 'Lost city',
@@ -47,6 +49,7 @@ class PermissionsSeeder extends Seeder
 
         $user = \App\Models\User::factory()->create([
             'name' => 'Example Client',
+            
             'email' => 'client@example.com',
             'password' => bcrypt('12345678'),
             'city' => 'Lost city',
@@ -57,6 +60,7 @@ class PermissionsSeeder extends Seeder
 
         $user = \App\Models\User::factory()->create([
             'name' => 'Example Seller User',
+            
             'email' => 'seller@example.com',
             'password' => bcrypt('12345678'),
             'city' => 'Found city',

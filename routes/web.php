@@ -1,5 +1,6 @@
 <?php
 
+use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -56,13 +57,13 @@ Route::group(['middleware'=>'auth'], function() {
    
     Route::group(['prefix'=>'user'], function() {
 Route::resource('profile', \App\Http\Controllers\UserController::class);
-Route::resource('products', App\Http\Controllers\ProductController::class);
+Route::resource('products', App\Http\Controllers\ProductController::class)->middleware('role:seller');
     });
 
 Route::group(['middleware'=>'role:admin', 'prefix'=>'admin'],function (){
-    Route::get('/dashboard', function (){
-        return view('admin.dashboard');
-    });
+    Route::get('dashboard',[\App\Http\Controllers\Dashboard::class,'resources']);
+    Route::resource('users',\App\Http\Controllers\UserAdminController::class);
+    Route::get('products',[\App\Http\Controllers\AdminProducts::class,'products']);
     Route::resource('roles', \App\Http\Controllers\RoleController::class);
     Route::resource('permissions', \App\Http\Controllers\PermissionController::class);
 });
