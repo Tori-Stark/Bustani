@@ -54,7 +54,7 @@ Route::resource('permissions', \App\Http\Controllers\PermissionController::class
 
 
 Route::group(['middleware'=>'auth'], function() {
-   
+
     Route::group(['prefix'=>'user'], function() {
 Route::resource('profile', \App\Http\Controllers\UserController::class);
 Route::resource('products', App\Http\Controllers\ProductController::class)->middleware('role:seller');
@@ -80,3 +80,6 @@ Route::get('/', 'App\Http\Controllers\ProductController@viewProduct');
 
 // Route::resource('products', \App\Http\Controllers\ProductController::class);
 
+Route::get('/about', function () {
+    return view('about');
+});

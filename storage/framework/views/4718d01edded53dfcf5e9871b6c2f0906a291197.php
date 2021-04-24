@@ -25,25 +25,17 @@
 
       <div class="collapse navbar-collapse" id="ftco-nav">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
-          <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</a>
-          <div class="dropdown-menu" aria-labelledby="dropdown04">
-              <a class="dropdown-item" href="shop.html">Shop</a>
-              <a class="dropdown-item" href="wishlist.html">Wishlist</a>
-            
-          </div>
-        </li>
-          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item active"><a href="/" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="/" class="nav-link">Products</a></li>
+          <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="/" class="nav-link">Contact</a></li>
           <?php if(auth()->guard()->guest()): ?>
                             <?php if(Route::has('login')): ?>
                                 <li class="nav-item">
                                     <a class="nav-link" href="<?php echo e(route('login')); ?>"><?php echo e(__('Login')); ?></a>
                                 </li>
                             <?php endif; ?>
-                            
+
                             <?php if(Route::has('register')): ?>
                                 <li class="nav-item">
                                     <a class="nav-link" href="<?php echo e(route('register')); ?>"><?php echo e(__('Register')); ?></a>
@@ -57,15 +49,15 @@
                                 </a>
 
                                 <div class="dropdown-menu " aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="/profile">Profile</a>
-                                <a class="dropdown-item" href="/profile">My Products</a>
+                                <a class="dropdown-item" href="/user/profile">Profile</a>
+                                <a class="dropdown-item" href="/user/products">My Products</a>
                                     <a class="dropdown-item" href="<?php echo e(route('logout')); ?>"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         <?php echo e(__('Logout')); ?>
 
                                     </a>
-                                    
+
 
                                     <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" class="d-none">
                                         <?php echo csrf_field(); ?>
@@ -78,4 +70,5 @@
       </div>
     </div>
   </nav>
-<!-- END nav --><?php /**PATH /Users/mike/Desktop/Bustani/resources/views/partials/nav.blade.php ENDPATH**/ ?>
+<!-- END nav -->
+<?php /**PATH /Users/mike/Desktop/Bustani/resources/views/partials/nav.blade.php ENDPATH**/ ?>
