@@ -45,12 +45,9 @@
                                 <td><?php echo e($product->price); ?></td>
                                 <td><img src="<?php echo e(asset('storage/product-images/' . $product->product_image)); ?>" width="auto;" height="70px;" alt="product_image"> </td>
                                 <td>
-                                    <a href="<?php echo e(route('product.edit', $product->id)); ?>" class="btn btn-dark pull-left" style="margin-right: 30px; margin-left: 30px;">Edit</a>
+                                    
 
-                                    <!-- Button trigger modal -->
-                                    <button type="button" data-form-link="<?php echo e(route('product.destroy', $product->id)); ?>" class="btn btn-danger delete-user-btn">
-                                        DELETE
-                                    </button>
+                            
                                 </td>
                             </tr>
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
@@ -58,7 +55,7 @@
                     </table>
                 </div>
             </div>
-            <a href="<?php echo e(route('products.create')); ?>" class="btn btn-primary">Add Product</a>
+            
         </div>
         <?php $__env->stopSection(); ?>
 

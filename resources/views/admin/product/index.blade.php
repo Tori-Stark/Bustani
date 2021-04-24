@@ -30,7 +30,7 @@
                             <th>Type</th>
                             <th>Price</th>
                             <th>Image</th>
-                            <th>Operations</th>
+                           
                         </tr>
                         </thead>
 
@@ -45,12 +45,9 @@
                                 <td>{{  $product->price}}</td>
                                 <td><img src="{{asset('storage/product-images/' . $product->product_image)}}" width="auto;" height="70px;" alt="product_image"> </td>
                                 <td>
-                                    <a href="{{ route('product.edit', $product->id) }}" class="btn btn-dark pull-left" style="margin-right: 30px; margin-left: 30px;">Edit</a>
+                                    
 
-                                    <!-- Button trigger modal -->
-                                    <button type="button" data-form-link="{{ route('product.destroy', $product->id) }}" class="btn btn-danger delete-user-btn">
-                                        DELETE
-                                    </button>
+                            
                                 </td>
                             </tr>
                         @endforeach
@@ -58,7 +55,7 @@
                     </table>
                 </div>
             </div>
-            <a href="{{ route('products.create') }}" class="btn btn-primary">Add Product</a>
+            
         </div>
         @endsection
 
