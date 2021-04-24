@@ -47,13 +47,13 @@
    <ul class="sidebar-menu do-nicescrol">
       <li class="sidebar-header">MAIN NAVIGATION</li>
       <li>
-        <a href="<?php echo e(asset('admin')); ?>">
+        <a href="<?php echo e(asset('admin/dashboard')); ?>">
           <i class="zmdi zmdi-view-dashboard"></i> <span>Dashboard</span>
         </a>
       </li>
 
        <li>
-           <a href="<?php echo e(asset('users')); ?>">
+           <a href="<?php echo e(asset('admin/users')); ?>">
                <i class="zmdi zmdi-folder-person"></i> <span>User Management</span>
            </a>
        </li>
