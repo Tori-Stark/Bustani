@@ -1,6 +1,6 @@
-@extends('layouts.master')
 
-@section('content')
+
+<?php $__env->startSection('content'); ?>
 
 <div class="hero-wrap hero-bread" style="background-image: url('assets/images/bg_1.jpg');">
     <div class="container">
@@ -24,36 +24,36 @@
                       <li><a href="#">Juice</a></li>
                       <li><a href="#">Dried</a></li>
                   </ul>
-                  <a class="nav-link" style="color:#82ae46" href={{ route('products.create')}} > Add Item</a>
+                  <a class="nav-link" style="color:#82ae46" href=<?php echo e(route('products.create')); ?> > Add Item</a>
               </div>
           </div>
           <div class="row">
 
               <div class="col-md-6 col-lg-3 ftco-animate">
                   <div class="product">
-                    @foreach($product as $product)
+                    <?php $__currentLoopData = $product; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $product): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 
-                      <a href="#" class="img-prod"><img class="img-fluid" src={{asset("assets/images/product-images/". $product->product_image)}} alt="Colorlib Template">
+                      <a href="#" class="img-prod"><img class="img-fluid" src=<?php echo e(asset("assets/images/product-images/". $product->product_image)); ?> alt="Colorlib Template">
                           <div class="overlay"></div>
                       </a>
                       <div class="text py-3 pb-4 px-3 text-center">
-                          <h3><a href="#">{{$product->name}}</a></h3>
+                          <h3><a href="#"><?php echo e($product->name); ?></a></h3>
                           <div class="d-flex">
                               <div class="pricing">
-                                  <p class="price"><span>${{$product->price}}</span></p>
+                                  <p class="price"><span>$<?php echo e($product->price); ?></span></p>
                               </div>
                           </div>
                           <div class="bottom-area d-flex px-3">
                               <div class="m-auto d-flex">
-                                  <a href={{ route('products.edit', $product)}}  class="add-to-cart d-flex justify-content-center align-items-center text-center">
+                                  <a href=<?php echo e(route('products.edit', $product)); ?>  class="add-to-cart d-flex justify-content-center align-items-center text-center">
                                       <span><i class="ion-ios-menu"></i></span>
                                   </a>
                                 <a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
                                       <span><i class="ion-ios-cart"></i></span>
                                   </a>
-                                  <form action={{ route('products.destroy', $product)}} method="post">
-                  @csrf
-                  @method('DELETE')
+                                  <form action=<?php echo e(route('products.destroy', $product)); ?> method="post">
+                  <?php echo csrf_field(); ?>
+                  <?php echo method_field('DELETE'); ?>
                   <button href="#" class="buy-now d-flex justify-content-center align-items-center mx-1" type="submit">
                                       <span><i class="ion-ios-cart"></i></span>
                   </button>
@@ -66,7 +66,7 @@
                           </div>
                       </div>
 
-                      @endforeach
+                      <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
                   </div>
 
@@ -111,4 +111,5 @@
   </section>
 
 
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\laure\Bustani\resources\views/client/products/index.blade.php ENDPATH**/ ?>

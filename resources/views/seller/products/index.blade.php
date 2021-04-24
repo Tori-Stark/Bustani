@@ -1,6 +1,6 @@
+@extends('layouts.master')
 
-
-<?php $__env->startSection('content'); ?>
+@section('content')
 
 <div class="hero-wrap hero-bread" style="background-image: url('assets/images/bg_1.jpg');">
     <div class="container">
@@ -24,45 +24,45 @@
                       <li><a href="#">Juice</a></li>
                       <li><a href="#">Dried</a></li>
                   </ul>
-                  <a class="nav-link" style="color:#82ae46" href=<?php echo e(route('products.create')); ?> > Add Item</a>
+                  <a class="nav-link" style="color:#82ae46" href={{ route('products.create')}} > Add Item</a>
               </div>
           </div>
           <div class="row">
 
-          <?php $__currentLoopData = $product; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $product): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+          @foreach($product as $product)
               <div class=" col-md-6 col-lg-3 ftco-animate">
                   <div class="product">
                    
 
-                      <a href="#" class="img-prod"><img class="img-fluid" src=<?php echo e(asset("assets/images/product-images/". $product->product_image)); ?> alt="Colorlib Template">
+                      <a href="#" class="img-prod"><img class="img-fluid" src={{asset("assets/images/product-images/". $product->product_image)}} alt="Colorlib Template">
                           <div class="overlay"></div>
                       </a>
                       <div class="text py-3 pb-4 px-3 text-center">
-                          <h3><a href="#"><?php echo e($product->name); ?></a></h3>
+                          <h3><a href="#">{{$product->name}}</a></h3>
                           <div class="d-flex">
                               <div class="pricing">
-                                  <p class="price"><span>$<?php echo e($product->price); ?></span></p>
+                                  <p class="price"><span>${{$product->price}}</span></p>
                               </div>
                           </div>
                           <div class="bottom-area d-flex px-3">
                               <div class="m-auto d-flex">
-                                  <a href=<?php echo e(route('products.edit', $product)); ?>  class="add-to-cart d-flex justify-content-center align-items-center text-center">
+                                  <a href={{ route('products.edit', $product)}}  class="add-to-cart d-flex justify-content-center align-items-center text-center">
                                       <span><i class="ion-ios-menu"></i></span>
                                   </a>
                                 <a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
                                       <span><i class="ion-ios-cart"></i></span>
                                   </a>
-                                  <form action=<?php echo e(route('products.destroy', $product)); ?> method="post">
-                  <?php echo csrf_field(); ?>
-                  <?php echo method_field('DELETE'); ?>
+                                  <form action={{ route('products.destroy', $product)}} method="post">
+                  @csrf
+                  @method('DELETE')
                   <button href="#" class="buy-now d-flex justify-content-center align-items-center mx-1" type="submit">
                                       <span><i class="ion-ios-cart"></i></span>
                   </button>
-
+                  
                 </form>
                                   <a href="#" class="heart d-flex justify-content-center align-items-center ">
                                       <span><i class="ion-ios-heart"></i></span>
-                                  </a>
+                                  </a> 
                               </div>
                           </div>
                       </div>
@@ -73,7 +73,7 @@
 
 
               </div>
-              <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+              @endforeach
           </div>
           <div class="row mt-5">
         <div class="col text-center">
@@ -113,5 +113,4 @@
   </section>
 
 
-<?php $__env->stopSection(); ?>
-<?php echo $__env->make('layouts.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\gudle\OneDrive\Desktop\web-applications\Bustani\resources\views/client/products/index.blade.php ENDPATH**/ ?>
+@endsection

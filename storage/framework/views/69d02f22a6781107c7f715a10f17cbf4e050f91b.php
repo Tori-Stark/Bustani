@@ -1,7 +1,7 @@
-@extends('layouts.master')
 
 
-@section('content')
+
+<?php $__env->startSection('content'); ?>
   <body class="goto-here">
     <section id="home-section" class="hero">
 		  <div class="home-slider owl-carousel">
@@ -145,24 +145,30 @@
     	</div>
 
     	<div class="container">
-			<div class="row">
-			@foreach($data as $item)
+			
+		<div class="row">
+			<?php $__currentLoopData = $data; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
     			<div class="col-md-6 col-lg-3 ftco-animate">
     				<div class="product">
+    					<!-- <a href="#" class="img-prod"><img class="img-fluid" src="assets/images/product-1.jpg" alt="Colorlib Template">
+    						<span class="status">30%</span>
+    						<div class="overlay"></div>
+    					</a> -->
 
-						<div class="item {{$item['id']==1?'active':''}}">
-							<h3><a href="detail/{{$item['id']}}"></a></h3>
-								<img class="img-fluid" src="{{asset($item['product_image'])}}" alt="Colorlib Template">
+
+						<div class="item <?php echo e($item['id']==1?'active':''); ?>">
+							<h3><a href="detail/<?php echo e($item['id']); ?>"></a></h3>
+								<img class="img-fluid" src="<?php echo e(asset($item['product_image'])); ?>" alt="Colorlib Template">
 								
 								<!-- <div class="carousel-caption slider-text"> -->
 
 								<div class="text py-3 pb-4 px-3 text-center">
-									<h3>{{$item['name']}}</h3>
+									<h3><?php echo e($item['name']); ?></h3>
 								</div>
-									<!-- <p>{{$item['description']}}</p> -->
+									<!-- <p><?php echo e($item['description']); ?></p> -->
 									<div class="d-flex">
 										<div class="pricing">
-											<p class="price"><span class="price-sale">$ {{$item['price']}}</span></p>
+											<p class="price"><span class="price-sale">$ <?php echo e($item['price']); ?></span></p>
 										</div>
 									</div>
 						</div>
@@ -181,7 +187,7 @@
     						</div>
 						</div>
 			</div>
-			@endforeach
+			<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 		</div>
 						
 
@@ -518,29 +524,9 @@
       </div>
     </section>
 
-    {{-- <hr> --}}
+    
 
-	{{-- <section class="ftco-section ftco-partner">
-    	<div class="container">
-    		<div class="row">
-    			<div class="col-sm ftco-animate">
-    				<a href="#" class="partner"><img src="assets/images/partner-1.png" class="img-fluid" alt="Colorlib Template"></a>
-    			</div>
-    			<div class="col-sm ftco-animate">
-    				<a href="#" class="partner"><img src="assets/images/partner-2.png" class="img-fluid" alt="Colorlib Template"></a>
-    			</div>
-    			<div class="col-sm ftco-animate">
-    				<a href="#" class="partner"><img src="assets/images/partner-3.png" class="img-fluid" alt="Colorlib Template"></a>
-    			</div>
-    			<div class="col-sm ftco-animate">
-    				<a href="#" class="partner"><img src="assets/images/partner-4.png" class="img-fluid" alt="Colorlib Template"></a>
-    			</div>
-    			<div class="col-sm ftco-animate">
-    				<a href="#" class="partner"><img src="assets/images/partner-5.png" class="img-fluid" alt="Colorlib Template"></a>
-    			</div>
-    		</div>
-    	</div>
-    </section> --}}
+	
 
 		<section class="ftco-section ftco-no-pt ftco-no-pb py-5 bg-light">
       <div class="container py-4">
@@ -567,5 +553,6 @@
 
   </body>
 
-  @endsection
+  <?php $__env->stopSection(); ?>
 </html>
+<?php echo $__env->make('layouts.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\laure\Bustani\resources\views/welcome.blade.php ENDPATH**/ ?>

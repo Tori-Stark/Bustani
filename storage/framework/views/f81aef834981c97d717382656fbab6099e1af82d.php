@@ -57,8 +57,8 @@
                                 </a>
 
                                 <div class="dropdown-menu " aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="/user/profile">Profile</a>
-                                <a class="dropdown-item" href="/user/products">My Products</a>
+                                <a class="dropdown-item" href="/profile">Profile</a>
+                                <a class="dropdown-item" href="/profile">My Products</a>
                                     <a class="dropdown-item" href="<?php echo e(route('logout')); ?>"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -79,4 +79,4 @@
     </div>
   </nav>
 <!-- END nav -->
-<?php /**PATH C:\Users\gudle\OneDrive\Desktop\web-applications\Bustani\resources\views/partials/nav.blade.php ENDPATH**/ ?>
+<?php /**PATH C:\Users\laure\Bustani\resources\views/partials/nav.blade.php ENDPATH**/ ?>

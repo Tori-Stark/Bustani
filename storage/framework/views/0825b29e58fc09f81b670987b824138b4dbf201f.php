@@ -58,11 +58,11 @@
                   <button href="#" class="buy-now d-flex justify-content-center align-items-center mx-1" type="submit">
                                       <span><i class="ion-ios-cart"></i></span>
                   </button>
-
+                  
                 </form>
                                   <a href="#" class="heart d-flex justify-content-center align-items-center ">
                                       <span><i class="ion-ios-heart"></i></span>
-                                  </a>
+                                  </a> 
                               </div>
                           </div>
                       </div>
@@ -114,4 +114,4 @@
 
 
 <?php $__env->stopSection(); ?>
-<?php echo $__env->make('layouts.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\gudle\OneDrive\Desktop\web-applications\Bustani\resources\views/client/products/index.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\gudle\OneDrive\Desktop\web-applications\Bustani\resources\views/seller/products/index.blade.php ENDPATH**/ ?>
