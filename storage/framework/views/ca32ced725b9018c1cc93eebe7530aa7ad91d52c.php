@@ -1,13 +1,17 @@
 
 
 <?php $__env->startSection('content'); ?>
+
+<link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
+            
                 <div class="card-header"><?php echo e(__('Register')); ?></div>
 
-                <div class="card-body">
+                <div class="card-body" style="background-image: url('assets/images/category-2.jpg');">
                     <form method="POST" action="<?php echo e(route('register')); ?>" enctype="multipart/form-data">
                         <?php echo csrf_field(); ?>
 
@@ -39,7 +43,7 @@ unset($__errorArgs, $__bag); ?>
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right"><?php echo e(__('city')); ?></label>
+                            <label for="name" class="col-md-4 col-form-label text-md-right"><?php echo e(__('City')); ?></label>
 
                             <div class="col-md-6">
                                 <input id="city" type="text" class="form-control <?php $__errorArgs = ['name'];
@@ -67,7 +71,7 @@ unset($__errorArgs, $__bag); ?>
                         </div>
 
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right"><?php echo e(__('phone Number')); ?></label>
+                            <label for="name" class="col-md-4 col-form-label text-md-right"><?php echo e(__('Phone Number')); ?></label>
 
                             <div class="col-md-6">
                                 <input id="phone_number" type="text" class="form-control <?php $__errorArgs = ['name'];
@@ -95,7 +99,7 @@ unset($__errorArgs, $__bag); ?>
                         </div>
 
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right"><?php echo e(__('E-Mail Address')); ?></label>
+                            <label for="email" class="col-md-4 col-form-label text-md-right"><?php echo e(__('E-mail Address')); ?></label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control <?php $__errorArgs = ['email'];
@@ -170,7 +174,7 @@ unset($__errorArgs, $__bag); ?>
                         <div class="form-group row mb-0">
 
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-raised btn-primary" style="background-color: green; border-color: green; z-index: 2;">
                                     <?php echo e(__('Register')); ?>
 
                                 </button>

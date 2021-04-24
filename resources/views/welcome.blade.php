@@ -146,13 +146,14 @@
 
     	<div class="container">
 			<div class="row">
+
 			@foreach($data as $item)
     			<div class="col-md-6 col-lg-3 ftco-animate">
     				<div class="product">
 
 						<div class="item {{$item['id']==1?'active':''}}">
 							<h3><a href="detail/{{$item['id']}}"></a></h3>
-								<img class="img-fluid" src="{{asset($item['product_image'])}}" alt="Colorlib Template">
+								<img class="img-fluid" src="{{ asset($item['product_image']) }}" alt="Colorlib Template">
 								
 								<!-- <div class="carousel-caption slider-text"> -->
 
