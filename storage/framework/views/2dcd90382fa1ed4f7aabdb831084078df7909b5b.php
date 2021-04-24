@@ -14,7 +14,7 @@
                     <div class="progress my-3" style="height:3px;">
                         <div class="progress-bar" style="width:55%"></div>
                     </div>
-                    <p class="mb-0 text-white small-font">Total Orders <span class="float-right">+4.2% <i class="zmdi zmdi-long-arrow-up"></i></span></p>
+                    <p class="mb-0 text-white small-font">Total Orders <?php echo e($productCount); ?> <span class="float-right">+4.2% <i class="zmdi zmdi-long-arrow-up"></i></span></p>
                 </div>
             </div>
             <div class="col-12 col-lg-6 col-xl-3 border-light">

@@ -7,7 +7,7 @@
                         <div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
                         <span class="text">+ 1235 2355 98</span>
                     </div>
-                    
+
                     <div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right">
                         <span class="text">info@bustani.com</span>
                     </div>
@@ -31,7 +31,7 @@
           <div class="dropdown-menu" aria-labelledby="dropdown04">
               <a class="dropdown-item" href="/">Shop</a>
               <a class="dropdown-item" href="/">Wishlist</a>
-            
+
           </div>
         </li>
           <li class="nav-item"><a href="/" class="nav-link">About</a></li>
@@ -57,8 +57,8 @@
                                 </a>
 
                                 <div class="dropdown-menu " aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="/profile">Profile</a>
-                                <a class="dropdown-item" href="/profile">My Products</a>
+                                <a class="dropdown-item" href="/user/profile">Profile</a>
+                                <a class="dropdown-item" href="/user/products">My Products</a>
                                     <a class="dropdown-item" href="<?php echo e(route('logout')); ?>"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -73,7 +73,7 @@
                                 </div>
                             </li>
                         <?php endif; ?>
-          
+
         </ul>
       </div>
     </div>
