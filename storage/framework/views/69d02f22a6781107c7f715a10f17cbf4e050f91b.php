@@ -98,7 +98,7 @@
 									<div class="text text-center">
 										<h2>Vegetables</h2>
 										<p>Protect the health of every home</p>
-										<p><a href="#" class="btn btn-primary">Shop now</a></p>
+										<p><a href="/products" class="btn btn-primary">Shop now</a></p>
 									</div>
 								</div>
 							</div>
@@ -110,7 +110,7 @@
 								</div>
 								<div class="category-wrap ftco-animate img d-flex align-items-end" style="background-image: url(assets/images/category-2.jpg);">
 									<div class="text px-3 py-1">
-										<h2 class="mb-0"><a href="#">Vegetables</a></h2>
+										<h2 class="mb-0"><a href="#">Vegetable</a></h2>
 									</div>
 								</div>
 							</div>
@@ -120,7 +120,7 @@
 					<div class="col-md-4">
 						<div class="category-wrap ftco-animate img mb-4 d-flex align-items-end" style="background-image: url(assets/images/category-3.jpg);">
 							<div class="text px-3 py-1">
-								<h2 class="mb-0"><a href="#">Juices</a></h2>
+								<h2 class="mb-0"><a href="#">Juice</a></h2>
 							</div>
 						</div>
 						<div class="category-wrap ftco-animate img d-flex align-items-end" style="background-image: url(assets/images/category-4.jpg);">
@@ -153,8 +153,8 @@
 
 						<div class="item <?php echo e($item['id']==1?'active':''); ?>">
 							<h3><a href="detail/<?php echo e($item['id']); ?>"></a></h3>
-								<img class="img-fluid" src="<?php echo e(asset($item['product_image'])); ?>" alt="Colorlib Template">
-								
+								<img class="img-fluid" src="<?php echo e(asset($item['product_image'])); ?>" alt="Product Image">
+
 								<!-- <div class="carousel-caption slider-text"> -->
 
 								<div class="text py-3 pb-4 px-3 text-center">
@@ -183,7 +183,8 @@
 						</div>
 			</div>
 			<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-		</div>				
+		</div>
+
     </section>
 
 		<section class="ftco-section img" style="background-image: url(assets/images/bg_3.jpg);">
@@ -192,9 +193,9 @@
           <div class="col-md-6 heading-section ftco-animate deal-of-the-day ftco-animate">
           	<span class="subheading">Best Price For You</span>
             <h2 class="mb-4">Deal of the day</h2>
-            <p>Far far away, behind the word mountains, far from the countries Nigeria and Consonantia</p>
+            <p>For the best deals and offers</p>
             <h3><a href="#">Spinach</a></h3>
-            <span class="price">$10 <a href="#">now $5 only</a></span>
+            <span class="price">Ksh. 50 <a href="#">now Ksh. 45 only</a></span>
             <div id="timer" class="d-flex mt-5">
 						  <div class="time" id="days"></div>
 						  <div class="time pl-3" id="hours"></div>
