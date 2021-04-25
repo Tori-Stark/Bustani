@@ -1,4 +1,4 @@
-@extends('admin.master')
+@extends('admin.admin')
 
 @section('title', '| Add Role')
 
@@ -9,7 +9,7 @@
         <h1><i class='fa fa-key'></i> Add Role</h1>
         <hr>
 
-        {{ Form::open(array('url' => 'roles')) }}
+        {{ Form::open(array('url' => 'admin/roles')) }}
 
         <div class="form-group">
             {{ Form::label('name', 'Name') }}
