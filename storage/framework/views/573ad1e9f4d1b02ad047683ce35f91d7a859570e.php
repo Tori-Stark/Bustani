@@ -33,7 +33,7 @@
                   <div class="product">
 
 
-                      <a href="/products/<?php echo e($product->id); ?>" class="img-prod"><img class="img-fluid" src=<?php echo e(productImage($product->product_image)); ?> alt="Product Image">
+                      <a href="/products/<?php echo e($product->id); ?>" class="img-prod"><img class="img-fluid" src=<?php echo e(($product->product_image)); ?> alt="Product Image">
                           <div class="overlay"></div>
                       </a>
                       <div class="text py-3 pb-4 px-3 text-center">
