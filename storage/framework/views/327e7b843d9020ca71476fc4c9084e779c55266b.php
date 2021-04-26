@@ -23,7 +23,8 @@
                   <h3><?php echo e($product->name); ?></h3>
                   <div class="comment mt-4 text-justify"> <img src=<?php echo e(asset("assets/images/users/". $seller->profile_photo)); ?> alt="" class="rounded-circle" width="40" height="40">
                     <h4><?php echo e($seller->name); ?></h4> <span>- <?php echo e($seller->phone_number); ?></span> <br>
-                    
+                    <h4></h4> <span>- <?php echo e($seller->email); ?></span> <br>
+                   
                 </div>
                   <div class="rating d-flex">
                           <p class="text-left mr-4">
@@ -42,7 +43,7 @@
                           </p>
                       </div>
                   <p class="price"><span><?php echo e($product->price); ?></span>kshs</p>
-                  <p<?php echo e($product->description); ?></p>
+                  <p><?php echo e($product->description); ?></p>
 
 
 

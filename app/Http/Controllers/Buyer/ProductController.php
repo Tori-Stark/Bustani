@@ -120,7 +120,7 @@ class ProductController extends Controller
 
     public static function getSeller($id){
         $seller = DB::table('users')
-                   ->select('users.name','users.id','users.phone_number','users.profile_photo')
+                   ->select('users.name','users.id','users.phone_number','users.profile_photo','users.email')
                    ->where('id', '=',$id)
                    ->get();
                    return $seller;

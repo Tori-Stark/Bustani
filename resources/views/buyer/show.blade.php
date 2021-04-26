@@ -21,9 +21,10 @@
               </div>
               <div class="col-lg-6 product-details pl-md-5 ftco-animate">
                   <h3>{{$product->name}}</h3>
-                  <div class="comment mt-4 text-justify"> <img src={{ asset("assets/images/users/". $seller->profile_photo)}} alt="" class="rounded-circle" width="40" height="40">
+                  <div class="comment mt-4 text-justify"> <img src={{asset("assets/images/users/". $seller->profile_photo)}} alt="" class="rounded-circle" width="40" height="40">
                     <h4>{{$seller->name}}</h4> <span>- {{$seller->phone_number}}</span> <br>
-                    
+                    <h4></h4> <span>- {{$seller->email}}</span> <br>
+                   
                 </div>
                   <div class="rating d-flex">
                           <p class="text-left mr-4">
@@ -41,16 +42,8 @@
                               <a href="#" class="mr-2" style="color: #000;">500 <span style="color: #bbb;">Sold</span></a>
                           </p>
                       </div>
-                  <div class="d-flex">
-                    <div class="pricing">
-                      <p class="price"><span>Ksh. {{$product->price}}</span></p>
-                    </div>
-                  </div>
+                  <p class="price"><span>{{$product->price}}</span>kshs</p>
                   <p>{{$product->description}}</p>
-
-                  <p><a href="#" class="btn btn-secondary py-3 px-5">Contact goes here</a></p>
-                  <p><a href="#" class="btn btn-secondary py-3 px-5">Email goes here</a></p>
-
 
 
 
@@ -65,7 +58,7 @@
             <div class="col-sm-5 col-md-6 col-12 pb-4">
                 <h1>Comments</h1>
                 @foreach($comments as $comment)
-                <div class="comment mt-4 text-justify"> <img src={{ userImage($comment->profile_photo) }} alt="" class="rounded-circle" width="40" height="40">
+                <div class="comment mt-4 text-justify"> <img src={{asset("assets/images/users/". $comment->profile_photo)}} alt="" class="rounded-circle" width="40" height="40">
                     <h4>{{$comment->name}}</h4> <span>- {{$comment->created_at}}</span> <br>
                     <p>{{$comment->comment}}</p>
                 </div>
@@ -85,16 +78,7 @@
                         <p class="text-secondary">If you have a <a href="#" class="alert-link">gravatar account</a> your address will be used to display your profile picture.</p>
                     </div>
 
-                    @if (Auth::user())
-
-                    <div class="form-group"> <button type="submit" id="post" class="btn btn-primary">Post Comment</button> </div>
-
-                    @else
-
-                    <a href="/login" class="btn btn-primary" style="margin-bottom:10px;">Login to leave a comment</a>
-
-
-                    @endif
+                    <div class="form-group"> <button type="submit" id="post" class="btn">Post Comment</button> </div>
                 </form>
             </div>
         </div>

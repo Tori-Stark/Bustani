@@ -1,5 +1,5 @@
 
- 
+
 <?php $__env->startSection('content'); ?>
 <div class="content">
 <div class="container d-flex justify-content-center">

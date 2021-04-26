@@ -47,7 +47,7 @@ class UserController extends Controller
     public function edit(User $user)
     {
         $user=Auth::user();
-        return view('profile.edit', compact('user'));
+        return view('seller.profile.edit', compact('user'));
     }
 
     /**
@@ -74,7 +74,7 @@ class UserController extends Controller
         
         $user->update();
 
-        return redirect('/profile')->with('success', 'Contact updated!');
+        return redirect('/seller/profile')->with('success', 'Contact updated!');
     }
 
     /**
