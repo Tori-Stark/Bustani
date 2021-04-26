@@ -133,7 +133,7 @@
                 </div>
                 
                 <div class="text text-center">
-                  <p class="mb-5 pl-4 line">Thanks to Bustani, I have been able to get more customers who enjoy my organic potatoes.</p>
+                  <p class="mb-5 pl-4 line">Thanks to Bustani, I have been able to get more customers who enjoy my organic potatoes. I am now a very happy farmer.</p>
                   <p class="name">Philipe` Smith</p>
                   <span class="position">Farmer- Smith Potato Farm</span>
                 </div>
@@ -165,7 +165,7 @@
                 </div>
                 
                 <div class="text text-center">
-                  <p class="mb-5 pl-4 line">Bustani has helped me connect with great maize farmers who provide fresh maize for my business. People going home from work are ver satisfied with the quality of the roasted maize.</p>
+                  <p class="mb-5 pl-4 line">Bustani has helped me connect with great maize farmers who provide fresh maize for my business. People going home from work are very satisfied with the quality of the roasted maize.</p>
                   <p class="name">Mista Hasla</p>
                   <span class="position">Owner- Hasla and Sons Spot</span>
                 </div>
