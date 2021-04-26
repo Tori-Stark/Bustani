@@ -34,7 +34,7 @@
                   <div class="product">
 
 
-                      <a href="#" class="img-prod"><img class="img-fluid" src={{asset("assets/images/product-images/". $product->product_image)}} alt="Product Image">
+                      <a href="#" class="img-prod"><img class="img-fluid" src={{ productImage($product->product_image) }} alt="Product Image">
                           <div class="overlay"></div>
                       </a>
                       <div class="text py-3 pb-4 px-3 text-center">

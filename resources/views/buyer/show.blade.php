@@ -39,11 +39,11 @@
                       </div>
                   <p class="price"><span>{{$product->price}}</span>kshs</p>
                   <p{{$product->description}}</p>
-                    
-            
+
+
 
 </div>
-                
+
       </div>
   </section>
 
@@ -53,7 +53,7 @@
             <div class="col-sm-5 col-md-6 col-12 pb-4">
                 <h1>Comments</h1>
                 @foreach($comments as $comment)
-                <div class="comment mt-4 text-justify"> <img src={{asset("assets/images/users". $comment->profile_photo)}} alt="" class="rounded-circle" width="40" height="40">
+                <div class="comment mt-4 text-justify"> <img src={{asset("assets/images/users/". $comment->profile_photo)}} alt="" class="rounded-circle" width="40" height="40">
                     <h4>{{$comment->name}}</h4> <span>- {{$comment->created_at}}</span> <br>
                     <p>{{$comment->comment}}</p>
                 </div>
@@ -67,19 +67,19 @@
                         <h4>Leave a comment</h4> <label for="message">Message</label> <textarea name="comment" id="comment" msg cols="30" rows="5" class="form-control" style="background-color: black;"></textarea>
                     </div>
                     <div class="form-group"> <label for="name">Rating (1 to 5)</label> <input type="range" class="custom-range" min="1" max="5" id="customRange2" name="rating" value=1> </div>
-                   
+
                    <input type="hidden" name="product_id" value={{$product->id}}>
                     <div class="form-group">
                         <p class="text-secondary">If you have a <a href="#" class="alert-link">gravatar account</a> your address will be used to display your profile picture.</p>
                     </div>
-                  
+
                     <div class="form-group"> <button type="submit" id="post" class="btn">Post Comment</button> </div>
                 </form>
             </div>
         </div>
     </div>
 </section>
-  
+
 
       <section class="ftco-section ftco-no-pt ftco-no-pb py-5 bg-light">
     <div class="container py-4">

@@ -105,12 +105,12 @@
 							<div class="col-md-6">
 								<div class="category-wrap ftco-animate img mb-4 d-flex align-items-end" style="background-image: url(assets/images/category-1.jpg);">
 									<div class="text px-3 py-1">
-										<h2 class="mb-0"><a href="#">Fruits</a></h2>
+										<h2 class="mb-0"><a href="/products?type=fruit">Fruits</a></h2>
 									</div>
 								</div>
 								<div class="category-wrap ftco-animate img d-flex align-items-end" style="background-image: url(assets/images/category-2.jpg);">
 									<div class="text px-3 py-1">
-										<h2 class="mb-0"><a href="#">Vegetable</a></h2>
+										<h2 class="mb-0"><a href="/products?type=vegetable">Vegetable</a></h2>
 									</div>
 								</div>
 							</div>
@@ -133,7 +133,7 @@
 			</div>
 		</section>
 
-    <section class="ftco-section">
+    {{-- <section class="ftco-section">
     	<div class="container">
 				<div class="row justify-content-center mb-3 pb-3">
           <div class="col-md-12 heading-section text-center ftco-animate">
@@ -153,7 +153,7 @@
 
 						<div class="item {{$item['id']==1?'active':''}}">
 							<h3><a href="detail/{{$item['id']}}"></a></h3>
-								<img class="img-fluid" src="{{asset($item['product_image'])}}" alt="Product Image">
+								<img class="img-fluid" src="{{ productImage($item['product_image'])}}" alt="Product Image">
 
 								<!-- <div class="carousel-caption slider-text"> -->
 
@@ -185,7 +185,7 @@
 			@endforeach
 		</div>
 
-    </section>
+    </section> --}}
 
 		<section class="ftco-section img" style="background-image: url(assets/images/bg_3.jpg);">
     	<div class="container">

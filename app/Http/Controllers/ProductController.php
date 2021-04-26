@@ -20,11 +20,12 @@ class ProductController extends Controller
     {
         $query = Product::where('type', $request->input('type'));
         if($request->has('type')){
-            $query->where('type','=',  $request->type );
+            $query->where('type','=',  $request->type,'AND' ,'user_id','=', Auth::user()->id  );
             $product=$query->get();
-        }      
+        }
         else{
-        $product = Product::all();
+            $query->where('user_id','=',  Auth::user()->id );
+            $product = $query->get();
         }
         return view('seller.products.index')->with('product', $product);
 
@@ -69,10 +70,10 @@ class ProductController extends Controller
             $file = $request->file('product_image');
             $extension = $file->getClientOriginalExtension();
             $filename = time(). '.' .$extension;
-            $file->move(public_path().'\assets\images\product-images', $filename);
+            $file->move(public_path().'/assets/images/product-images', $filename);
             $product->product_image = $filename;
             $product->user_id = Auth::id();
-            
+
         }else{
             $product->product_image = '';
         }

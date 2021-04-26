@@ -4,7 +4,7 @@
     <div class="container">
       <div class="row no-gutters slider-text align-items-center justify-content-center">
         <div class="col-md-9 ftco-animate text-center">
-            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Products</span></p>
+            <p class="breadcrumbs"><span class="mr-2"><a href="">Home</a></span> <span>Products</span></p>
           <h1 class="mb-0 bread">Products</h1>
         </div>
       </div>
@@ -16,13 +16,13 @@
           <div class="row justify-content-center">
               <div class="col-md-10 mb-5 text-center">
                   <ul class="product-category">
-                      <li><a href="#" class="active">All</a></li>
-                      <li><a href="#">Vegetables</a></li>
-                      <li><a href="#">Fruits</a></li>
+                      <li><a href=<?php echo e("/seller/products"); ?> >All</a></li>
+                      <li><a href=<?php echo e("/seller/products?type=vegetables"); ?>>Vegetables</a></li>
+                      <li><a href=<?php echo e("/seller/products?type=fruit"); ?>>Fruits</a></li>
                       
-                      <li><a href="#">Dried</a></li>
+                      <li><a href=<?php echo e("/seller/products?type=dried"); ?>>Dried</a></li>
                   </ul>
-                  <a class="nav-link" style="color:#82ae46" href=<?php echo e(route('products.create')); ?> > Add Item</a>
+                  <a class="nav-link" style="color:#82ae46" href=<?php echo e("/seller/products/create"); ?> > Add Item</a>
               </div>
           </div>
           <div class="row">
@@ -32,7 +32,7 @@
                   <div class="product">
 
 
-                      <a href="#" class="img-prod"><img class="img-fluid" src=<?php echo e(asset("assets/images/product-images/". $product->product_image)); ?> alt="Product Image">
+                      <a href="#" class="img-prod"><img class="img-fluid" src=<?php echo e(productImage($product->product_image)); ?> alt="Product Image">
                           <div class="overlay"></div>
                       </a>
                       <div class="text py-3 pb-4 px-3 text-center">
