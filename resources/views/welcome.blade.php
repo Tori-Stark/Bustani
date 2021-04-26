@@ -36,6 +36,7 @@
 	      </div>
 	    </div>
     </section>
+    
 
     <section class="ftco-section">
 			<div class="container">
@@ -51,33 +52,39 @@
               </div>
             </div>
           </div>
+          
           <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
             <div class="media block-6 services mb-md-0 mb-4">
               <div class="icon bg-color-2 d-flex justify-content-center align-items-center mb-2">
             		<span class="flaticon-diet"></span>
               </div>
+              
               <div class="media-body">
                 <h3 class="heading">Always Fresh</h3>
                 <span>Product well packaged</span>
               </div>
             </div>
           </div>
+          
           <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
             <div class="media block-6 services mb-md-0 mb-4">
               <div class="icon bg-color-3 d-flex justify-content-center align-items-center mb-2">
             		<span class="flaticon-award"></span>
               </div>
+              
               <div class="media-body">
                 <h3 class="heading">Superior Quality</h3>
                 <span>Quality Products</span>
               </div>
             </div>
           </div>
+          
           <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
             <div class="media block-6 services mb-md-0 mb-4">
               <div class="icon bg-color-4 d-flex justify-content-center align-items-center mb-2">
             		<span class="flaticon-customer-service"></span>
               </div>
+              
               <div class="media-body">
                 <h3 class="heading">Support</h3>
                 <span>24/7 Support</span>
@@ -87,6 +94,7 @@
         </div>
 			</div>
 		</section>
+        
 
 		<section class="ftco-section ftco-category ftco-no-pt">
 			<div class="container">
@@ -102,12 +110,14 @@
 									</div>
 								</div>
 							</div>
+                            
 							<div class="col-md-6">
 								<div class="category-wrap ftco-animate img mb-4 d-flex align-items-end" style="background-image: url(assets/images/category-1.jpg);">
 									<div class="text px-3 py-1">
 										<h2 class="mb-0"><a href="/products?type=fruit">Fruits</a></h2>
 									</div>
 								</div>
+                                
 								<div class="category-wrap ftco-animate img d-flex align-items-end" style="background-image: url(assets/images/category-2.jpg);">
 									<div class="text px-3 py-1">
 										<h2 class="mb-0"><a href="/products?type=vegetable">Vegetable</a></h2>
@@ -123,6 +133,7 @@
 								<h2 class="mb-0"><a href="#">Juice</a></h2>
 							</div>
 						</div>
+                        
 						<div class="category-wrap ftco-animate img d-flex align-items-end" style="background-image: url(assets/images/category-4.jpg);">
 							<div class="text px-3 py-1">
 								<h2 class="mb-0"><a href="#">Dried</a></h2>
@@ -132,6 +143,7 @@
 				</div>
 			</div>
 		</section>
+        
 
     {{-- <section class="ftco-section">
     	<div class="container">
@@ -167,6 +179,7 @@
 										</div>
 									</div>
 						</div>
+                        
 							<div class="bottom-area d-flex px-3">
 	    						<div class="m-auto d-flex">
 	    							<a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
@@ -186,6 +199,7 @@
 		</div>
 
     </section> --}}
+    
 
 		<section class="ftco-section img" style="background-image: url(assets/images/bg_3.jpg);">
     	<div class="container">
@@ -206,86 +220,97 @@
         </div>
     	</div>
     </section>
+    
 
     <section class="ftco-section testimony-section">
       <div class="container">
         <div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section ftco-animate text-center">
-          	<span class="subheading">Testimony</span>
+          	<span class="subheading">Customer Reviews</span>
             <h2 class="mb-4">Our satisfied customer says</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
+            <p> </p>
           </div>
         </div>
+        
         <div class="row ftco-animate">
           <div class="col-md-12">
             <div class="carousel-testimony owl-carousel">
               <div class="item">
                 <div class="testimony-wrap p-4 pb-5">
-                  <div class="user-img mb-5" style="background-image: url(assets/images/person_1.jpg)">
+                  <div class="user-img mb-5" style="background-image: url(assets/images/about2.jpg)">
                     <span class="quote d-flex align-items-center justify-content-center">
                       <i class="icon-quote-left"></i>
                     </span>
                   </div>
+                  
                   <div class="text text-center">
-                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Garreth Smith</p>
-                    <span class="position">Marketing Manager</span>
+                    <p class="mb-5 pl-4 line">Thanks to Bustani, I have been able to get more customers who enjoy my organic potatoes.</p>
+                    <p class="name">Philipe` Smith</p>
+                    <span class="position">Farmer- Smith Potato Farm</span>
                   </div>
                 </div>
               </div>
+              
               <div class="item">
                 <div class="testimony-wrap p-4 pb-5">
-                  <div class="user-img mb-5" style="background-image: url(assets/images/person_2.jpg)">
+                  <div class="user-img mb-5" style="background-image: url(assets/images/about1.jpg)">
                     <span class="quote d-flex align-items-center justify-content-center">
                       <i class="icon-quote-left"></i>
                     </span>
                   </div>
+                  
                   <div class="text text-center">
-                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Garreth Smith</p>
-                    <span class="position">Interface Designer</span>
+                    <p class="mb-5 pl-4 line">As an upcoming restaurant, we pride in making fresh food for our customers. Through Bustani, we have been able to find the best farm products from the farmers directly. This has helped boost our business.</p>
+                    <p class="name">Miriam Johnson</p>
+                    <span class="position">Owner- Kapseski Restaurant</span>
                   </div>
                 </div>
               </div>
+              
               <div class="item">
                 <div class="testimony-wrap p-4 pb-5">
-                  <div class="user-img mb-5" style="background-image: url(assets/images/person_3.jpg)">
+                  <div class="user-img mb-5" style="background-image: url(assets/images/about3.jpg)">
                     <span class="quote d-flex align-items-center justify-content-center">
                       <i class="icon-quote-left"></i>
                     </span>
                   </div>
+                  
                   <div class="text text-center">
-                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Garreth Smith</p>
-                    <span class="position">UI Designer</span>
+                    <p class="mb-5 pl-4 line">Bustani has helped me connect with great maize farmers who provide fresh maize for my business. People going home from work are ver satisfied with the quality of the roasted maize.</p>
+                    <p class="name">Mista Hasla</p>
+                    <span class="position">Mista Hasla</span>
                   </div>
                 </div>
               </div>
+              
               <div class="item">
                 <div class="testimony-wrap p-4 pb-5">
-                  <div class="user-img mb-5" style="background-image: url(assets/images/person_1.jpg)">
+                  <div class="user-img mb-5" style="background-image: url(assets/images/about4.jpg)">
                     <span class="quote d-flex align-items-center justify-content-center">
                       <i class="icon-quote-left"></i>
                     </span>
                   </div>
+                  
                   <div class="text text-center">
-                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Garreth Smith</p>
-                    <span class="position">Web Developer</span>
+                    <p class="mb-5 pl-4 line">As a supermarket, customers expect fresh products. Bustani has connected us to farmers in our town,not only helping us but has also uplifted our community.</p>
+                    <p class="name">Bucky Barnes</p>
+                    <span class="position">Human Resource Manager- Amani Supermarket</span>
                   </div>
                 </div>
               </div>
+              
               <div class="item">
                 <div class="testimony-wrap p-4 pb-5">
-                  <div class="user-img mb-5" style="background-image: url(assets/images/person_1.jpg)">
+                  <div class="user-img mb-5" style="background-image: url(assets/images/about5.jpg)">
                     <span class="quote d-flex align-items-center justify-content-center">
                       <i class="icon-quote-left"></i>
                     </span>
                   </div>
+                  
                   <div class="text text-center">
-                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Garreth Smith</p>
-                    <span class="position">System Analyst</span>
+                    <p class="mb-5 pl-4 line">Although the market for Goji berries is said to be small, Bustani has helped me find many people who are interested. My business is going well, thanks to them.</p>
+                    <p class="name">Alejandro Jose`</p>
+                    <span class="position">Ranch Owner- Hasienda Ranch</span>
                   </div>
                 </div>
               </div>
@@ -294,30 +319,38 @@
         </div>
       </div>
     </section>
+    
 
     {{-- <hr> --}}
 
 	{{-- <section class="ftco-section ftco-partner">
     	<div class="container">
     		<div class="row">
+            
     			<div class="col-sm ftco-animate">
     				<a href="#" class="partner"><img src="assets/images/partner-1.png" class="img-fluid" alt="Colorlib Template"></a>
     			</div>
+                
     			<div class="col-sm ftco-animate">
     				<a href="#" class="partner"><img src="assets/images/partner-2.png" class="img-fluid" alt="Colorlib Template"></a>
     			</div>
+                
     			<div class="col-sm ftco-animate">
     				<a href="#" class="partner"><img src="assets/images/partner-3.png" class="img-fluid" alt="Colorlib Template"></a>
     			</div>
+                
     			<div class="col-sm ftco-animate">
     				<a href="#" class="partner"><img src="assets/images/partner-4.png" class="img-fluid" alt="Colorlib Template"></a>
     			</div>
+                
     			<div class="col-sm ftco-animate">
     				<a href="#" class="partner"><img src="assets/images/partner-5.png" class="img-fluid" alt="Colorlib Template"></a>
     			</div>
+                
     		</div>
     	</div>
     </section> --}}
+    
 
 		<section class="ftco-section ftco-no-pt ftco-no-pb py-5 bg-light">
       <div class="container py-4">
@@ -326,12 +359,14 @@
           	<h2 style="font-size: 22px;" class="mb-0">Subcribe to our Newsletter</h2>
           	<span>Get e-mail updates about our latest blogs and special offers</span>
           </div>
+          
           <div class="col-md-6 d-flex align-items-center">
             <form action="#" class="subscribe-form">
               <div class="form-group d-flex">
                 <input type="text" class="form-control" placeholder="Enter email address">
                 <input type="submit" value="Subscribe" class="submit px-3">
               </div>
+              
             </form>
           </div>
         </div>
