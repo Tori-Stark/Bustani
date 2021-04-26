@@ -20,7 +20,7 @@ class ProductController extends Controller
     {
         $query = Product::where('type', $request->input('type'));
         if($request->has('type')){
-            $query->where('type','=',  $request->type,'AND' ,'user_id','=', Auth::user()->id  );
+            $query->where('type','=',  $request->type ,'AND', 'user_id','=', Auth::user()->id  );
             $product=$query->get();
         }
         else{
