@@ -1,4 +1,4 @@
-@extends('admin.master')
+@extends('admin.admin')
 
 @section('title', '| Add Role')
 

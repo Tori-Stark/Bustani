@@ -2,7 +2,7 @@
 
 <?php $__env->startSection('content'); ?>
 
-<div class="hero-wrap hero-bread" style="background-image: url('assets/images/bg_1.jpg');">
+<div class="hero-wrap hero-bread" style="background-image: url('../assets/images/bg_1.jpg');">
     <div class="container">
       <div class="row no-gutters slider-text align-items-center justify-content-center">
         <div class="col-md-9 ftco-animate text-center">
@@ -18,13 +18,13 @@
           <div class="row justify-content-center">
               <div class="col-md-10 mb-5 text-center">
                   <ul class="product-category">
-                      <li><a href="#" class="active">All</a></li>
-                      <li><a href="#">Vegetables</a></li>
-                      <li><a href="#">Fruits</a></li>
-                      <li><a href="#">Juice</a></li>
-                      <li><a href="#">Dried</a></li>
+                      <li><a href=<?php echo e("/seller/products"); ?> >All</a></li>
+                      <li><a href=<?php echo e("/seller/products?type=vegetables"); ?>>Vegetables</a></li>
+                      <li><a href=<?php echo e("/seller/products?type=fruit"); ?>>Fruits</a></li>
+                      
+                      <li><a href=<?php echo e("/seller/products?type=dried"); ?>>Dried</a></li>
                   </ul>
-                  <a class="nav-link" style="color:#82ae46" href=<?php echo e(route('products.create')); ?> > Add Item</a>
+                  <a class="nav-link" style="color:#82ae46" href=<?php echo e("/seller/products/create"); ?> > Add Item</a>
               </div>
           </div>
           <div class="row">
@@ -32,9 +32,9 @@
           <?php $__currentLoopData = $product; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $product): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
               <div class=" col-md-6 col-lg-3 ftco-animate">
                   <div class="product">
-                   
 
-                      <a href="#" class="img-prod"><img class="img-fluid" src=<?php echo e(asset("assets/images/product-images/". $product->product_image)); ?> alt="Colorlib Template">
+
+                      <a href="#" class="img-prod"><img class="img-fluid" src=<?php echo e(asset("assets/images/product-images/". $product->product_image)); ?> alt="Product Image">
                           <div class="overlay"></div>
                       </a>
                       <div class="text py-3 pb-4 px-3 text-center">
@@ -58,16 +58,16 @@
                   <button href="#" class="buy-now d-flex justify-content-center align-items-center mx-1" type="submit">
                                       <span><i class="ion-ios-cart"></i></span>
                   </button>
-                  
+
                 </form>
                                   <a href="#" class="heart d-flex justify-content-center align-items-center ">
                                       <span><i class="ion-ios-heart"></i></span>
-                                  </a> 
+                                  </a>
                               </div>
                           </div>
                       </div>
 
-                      
+
 
                   </div>
 

@@ -51,8 +51,8 @@
                                 </a>
 
                                 <div class="dropdown-menu " aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="/user/profile">Profile</a>
-                                <a class="dropdown-item" href="/user/products">My Products</a>
+                                <a class="dropdown-item" href="/seller/profile">Profile</a>
+                                {{ Auth::user()->hasRole('seller')? "<a class='dropdown-item' href='/seller/products'>My Products</a>" : ""}} 
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
