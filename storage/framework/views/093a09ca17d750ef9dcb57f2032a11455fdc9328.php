@@ -15,7 +15,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    
+
     <!-- Styles -->
     <link href="<?php echo e(asset('css/app.css')); ?>" rel="stylesheet">
 </head>
@@ -46,7 +46,7 @@
                                     <a class="nav-link" href="<?php echo e(route('login')); ?>" style="color: green;"><?php echo e(__('Login')); ?></a>
                                 </li>
                             <?php endif; ?>
-                            
+
                             <?php if(Route::has('register')): ?>
                                 <li class="nav-item">
                                     <a class="nav-link" href="<?php echo e(route('register')); ?>" style="color: green;"><?php echo e(__('Register')); ?></a>

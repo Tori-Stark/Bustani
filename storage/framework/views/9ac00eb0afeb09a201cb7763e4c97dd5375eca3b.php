@@ -35,8 +35,16 @@
                               <a href="#" class="mr-2" style="color: #000;">500 <span style="color: #bbb;">Sold</span></a>
                           </p>
                       </div>
-                  <p class="price"><span><?php echo e($product->price); ?></span>kshs</p>
-                  <p<?php echo e($product->description); ?></p>
+                  <div class="d-flex">
+                    <div class="pricing">
+                      <p class="price"><span>Ksh. <?php echo e($product->price); ?></span></p>
+                    </div>
+                  </div>
+                  <p><?php echo e($product->description); ?></p>
+
+                  <p><a href="#" class="btn btn-secondary py-3 px-5">Contact goes here</a></p>
+                  <p><a href="#" class="btn btn-secondary py-3 px-5">Email goes here</a></p>
+
 
 
 
@@ -51,7 +59,7 @@
             <div class="col-sm-5 col-md-6 col-12 pb-4">
                 <h1>Comments</h1>
                 <?php $__currentLoopData = $comments; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $comment): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                <div class="comment mt-4 text-justify"> <img src=<?php echo e(asset("assets/images/users/". $comment->profile_photo)); ?> alt="" class="rounded-circle" width="40" height="40">
+                <div class="comment mt-4 text-justify"> <img src=<?php echo e(userImage($comment->profile_photo)); ?> alt="" class="rounded-circle" width="40" height="40">
                     <h4><?php echo e($comment->name); ?></h4> <span>- <?php echo e($comment->created_at); ?></span> <br>
                     <p><?php echo e($comment->comment); ?></p>
                 </div>
@@ -71,7 +79,16 @@
                         <p class="text-secondary">If you have a <a href="#" class="alert-link">gravatar account</a> your address will be used to display your profile picture.</p>
                     </div>
 
-                    <div class="form-group"> <button type="submit" id="post" class="btn">Post Comment</button> </div>
+                    <?php if(Auth::user()): ?>
+
+                    <div class="form-group"> <button type="submit" id="post" class="btn btn-primary">Post Comment</button> </div>
+
+                    <?php else: ?>
+
+                    <a href="/login" class="btn btn-primary" style="margin-bottom:10px;">Login to leave a comment</a>
+
+
+                    <?php endif; ?>
                 </form>
             </div>
         </div>
