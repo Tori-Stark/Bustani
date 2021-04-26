@@ -21,6 +21,10 @@
               </div>
               <div class="col-lg-6 product-details pl-md-5 ftco-animate">
                   <h3>{{$product->name}}</h3>
+                  <div class="comment mt-4 text-justify"> <img src={{ asset("assets/images/users/". $seller->profile_photo)}} alt="" class="rounded-circle" width="40" height="40">
+                    <h4>{{$seller->name}}</h4> <span>- {{$seller->phone_number}}</span> <br>
+                    
+                </div>
                   <div class="rating d-flex">
                           <p class="text-left mr-4">
                               <a href="#" class="mr-2">{{$productRating[0]->rating_average}}</a>

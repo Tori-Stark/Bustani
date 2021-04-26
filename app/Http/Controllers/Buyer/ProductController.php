@@ -64,8 +64,9 @@ class ProductController extends Controller
         $product = Product::where('id', '=', $id)->firstOrFail();
         $productRating= ProductController::getRating($id);
         $comments=ProductController::getComments($id);
+        $seller=ProductController::getSeller($product->user_id)[0];
 
-        return view('buyer.show', compact('product','productRating','comments'));
+        return view('buyer.show', compact('product','productRating','comments','seller'));
     }
 
     /**
@@ -117,6 +118,15 @@ class ProductController extends Controller
         return redirect('/products/'.$request->product_id);
     }
 
+    public static function getSeller($id){
+        $seller = DB::table('users')
+                   ->select('users.name','users.id','users.phone_number','users.profile_photo')
+                   ->where('id', '=',$id)
+                   ->get();
+                   return $seller;
+
+
+    }
     public static function getRating($product_id){
        $avgRate= DB::table('product_ratings')
              ->select(DB::raw('AVG(rate) AS rating_average'))

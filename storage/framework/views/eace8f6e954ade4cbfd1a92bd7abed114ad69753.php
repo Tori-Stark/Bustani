@@ -50,13 +50,18 @@
 
                                 <div class="dropdown-menu " aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="/seller/profile">Profile</a>
-                                <?php echo e(Auth::user()->hasRole('seller')? "<a class='dropdown-item' href='/seller/products'>My Products</a>" : ""); ?> 
+                                <?php if(Auth::user()->hasRole('seller')): ?>
+                                    <a class='dropdown-item' href='/seller/products'>My Products</a>
+                                <?php endif; ?>
                                     <a class="dropdown-item" href="<?php echo e(route('logout')); ?>"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         <?php echo e(__('Logout')); ?>
 
                                     </a>
+
+
+
 
 
                                     <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" class="d-none">

@@ -20,12 +20,13 @@ class ProductController extends Controller
     {
         $query = Product::where('type', $request->input('type'));
         if($request->has('type')){
-            $query->where('type','=',  $request->type,'AND' ,'user_id','=', Auth::user()->id  );
+            $query->where('type','=',  $request->type);
+            $query->where('user_id','=', Auth::user()->id  );
             $product=$query->get();
         }
         else{
-            $query->where('user_id','=',  Auth::user()->id );
-            $product = $query->get();
+            
+            $product = Product::all();
         }
         return view('seller.products.index')->with('product', $product);
 
