@@ -10,7 +10,7 @@
         <h1><i class='fa fa-key'></i> Add Permission</h1>
         <br>
 
-        <?php echo e(Form::open(array('url' => 'permissions'))); ?>
+        <?php echo e(Form::open(array('url' => 'admin/permissions'))); ?>
 
 
         <div class="form-group">

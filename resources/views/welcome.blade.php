@@ -98,19 +98,19 @@
 									<div class="text text-center">
 										<h2>Vegetables</h2>
 										<p>Protect the health of every home</p>
-										<p><a href="#" class="btn btn-primary">Shop now</a></p>
+										<p><a href="/products" class="btn btn-primary">Shop now</a></p>
 									</div>
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="category-wrap ftco-animate img mb-4 d-flex align-items-end" style="background-image: url(assets/images/category-1.jpg);">
 									<div class="text px-3 py-1">
-										<h2 class="mb-0"><a href="#">Vegetables</a></h2>
+										<h2 class="mb-0"><a href="#">Fruits</a></h2>
 									</div>
 								</div>
-								<div class="category-wrap ftco-animate img d-flex align-items-end" style="background-image: url(assets/images/category-3.jpg);">
+								<div class="category-wrap ftco-animate img d-flex align-items-end" style="background-image: url(assets/images/category-2.jpg);">
 									<div class="text px-3 py-1">
-										<h2 class="mb-0"><a href="#">Fruits</a></h2>
+										<h2 class="mb-0"><a href="#">Vegetable</a></h2>
 									</div>
 								</div>
 							</div>
@@ -118,9 +118,9 @@
 					</div>
 
 					<div class="col-md-4">
-						<div class="category-wrap ftco-animate img mb-4 d-flex align-items-end" style="background-image: url(assets/images/category-2.jpg);">
+						<div class="category-wrap ftco-animate img mb-4 d-flex align-items-end" style="background-image: url(assets/images/category-3.jpg);">
 							<div class="text px-3 py-1">
-								<h2 class="mb-0"><a href="#">Fruits</a></h2>
+								<h2 class="mb-0"><a href="#">Juice</a></h2>
 							</div>
 						</div>
 						<div class="category-wrap ftco-animate img d-flex align-items-end" style="background-image: url(assets/images/category-4.jpg);">
@@ -146,6 +146,7 @@
 
     	<div class="container">
 			<div class="row">
+
 			@foreach($data as $item)
     			<div class="col-md-6 col-lg-3 ftco-animate">
     				<div class="product">

@@ -80,7 +80,7 @@ class RoleController extends Controller {
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
     public function show($id) {
-        return redirect('roles');
+        return redirect('admin.roles');
     }
 
     /**
