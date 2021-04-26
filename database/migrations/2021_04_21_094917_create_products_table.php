@@ -18,8 +18,11 @@ class CreateProductsTable extends Migration
             $table->string("name");
             $table->string("description");
             $table->integer("price");
+            $table->string("type");
             $table->mediumText('product_image')->nullable();
             $table->timestamps();
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

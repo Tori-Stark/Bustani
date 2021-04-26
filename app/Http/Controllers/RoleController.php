@@ -68,7 +68,7 @@ class RoleController extends Controller {
             $role->givePermissionTo($p);
         }
 
-        return redirect()->route('roles.index')
+        return redirect()->route('admin.roles.index')
             ->with('flash_message',
                 'Role'. $role->name.' added!');
     }

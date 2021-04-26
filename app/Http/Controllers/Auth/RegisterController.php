@@ -68,7 +68,7 @@ class RegisterController extends Controller
         $photo = $request->file('profile_photo');
         $file_extention = $photo->getClientOriginalExtension();
     $file_name = time().rand(99,999).$file_extention;
-    $file_path = $data['profile_photo']->move(public_path().'\assets\images\users',$file_name);
+    $file_path = $data['profile_photo']->move(public_path().'/assets/images/users',$file_name);
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],

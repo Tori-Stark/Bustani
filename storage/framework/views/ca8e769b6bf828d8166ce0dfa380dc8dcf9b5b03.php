@@ -102,12 +102,12 @@
 							<div class="col-md-6">
 								<div class="category-wrap ftco-animate img mb-4 d-flex align-items-end" style="background-image: url(assets/images/category-1.jpg);">
 									<div class="text px-3 py-1">
-										<h2 class="mb-0"><a href="#">Vegetables</a></h2>
+										<h2 class="mb-0"><a href="/products?type=fruit">Fruits</a></h2>
 									</div>
 								</div>
-								<div class="category-wrap ftco-animate img d-flex align-items-end" style="background-image: url(assets/images/category-3.jpg);">
+								<div class="category-wrap ftco-animate img d-flex align-items-end" style="background-image: url(assets/images/category-2.jpg);">
 									<div class="text px-3 py-1">
-										<h2 class="mb-0"><a href="#">Fruits</a></h2>
+										<h2 class="mb-0"><a href="/products?type=vegetable">Vegetable</a></h2>
 									</div>
 								</div>
 							</div>
@@ -115,14 +115,14 @@
 					</div>
 
 					<div class="col-md-4">
-						<div class="category-wrap ftco-animate img mb-4 d-flex align-items-end" style="background-image: url(assets/images/category-2.jpg);">
+						<div class="category-wrap ftco-animate img mb-4 d-flex align-items-end" style="background-image: url(assets/images/category-3.jpg);">
 							<div class="text px-3 py-1">
-								<h2 class="mb-0"><a href="#">Fruits</a></h2>
+								<h2 class="mb-0"><a href="/products?type=fruit">Fruits</a></h2>
 							</div>
 						</div>
 						<div class="category-wrap ftco-animate img d-flex align-items-end" style="background-image: url(assets/images/category-4.jpg);">
 							<div class="text px-3 py-1">
-								<h2 class="mb-0"><a href="#">Dried</a></h2>
+								<h2 class="mb-0"><a href="/products?type=dried">Dried</a></h2>
 							</div>
 						</div>
 					</div>
@@ -130,58 +130,7 @@
 			</div>
 		</section>
 
-    <section class="ftco-section">
-    	<div class="container">
-				<div class="row justify-content-center mb-3 pb-3">
-          <div class="col-md-12 heading-section text-center ftco-animate">
-          	<span class="subheading">Featured Products</span>
-            <h2 class="mb-4">Our Products</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-          </div>
-        </div>
-    	</div>
-
-    	<div class="container">
-			<div class="row">
-			<?php $__currentLoopData = $data; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-    			<div class="col-md-6 col-lg-3 ftco-animate">
-    				<div class="product">
-
-						<div class="item <?php echo e($item['id']==1?'active':''); ?>">
-							<h3><a href="detail/<?php echo e($item['id']); ?>"></a></h3>
-								<img class="img-fluid" src="<?php echo e(asset($item['product_image'])); ?>" alt="Product Image">
-
-								<!-- <div class="carousel-caption slider-text"> -->
-
-								<div class="text py-3 pb-4 px-3 text-center">
-									<h3><?php echo e($item['name']); ?></h3>
-								</div>
-									<!-- <p><?php echo e($item['description']); ?></p> -->
-									<div class="d-flex">
-										<div class="pricing">
-											<p class="price"><span class="price-sale">$ <?php echo e($item['price']); ?></span></p>
-										</div>
-									</div>
-						</div>
-							<div class="bottom-area d-flex px-3">
-	    						<div class="m-auto d-flex">
-	    							<a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
-	    								<span><i class="ion-ios-menu"></i></span>
-	    							</a>
-	    							<a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
-	    								<span><i class="ion-ios-cart"></i></span>
-	    							</a>
-	    							<a href="#" class="heart d-flex justify-content-center align-items-center ">
-	    								<span><i class="ion-ios-heart"></i></span>
-	    							</a>
-    							</div>
-    						</div>
-						</div>
-			</div>
-			<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-		</div>
-
-    </section>
+    
 
 		<section class="ftco-section img" style="background-image: url(assets/images/bg_3.jpg);">
     	<div class="container">

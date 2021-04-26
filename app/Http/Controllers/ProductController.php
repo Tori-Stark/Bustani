@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Auth;
 
 class ProductController extends Controller
 {
@@ -15,9 +16,17 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $product = Product::all();
+        $query = Product::where('type', $request->input('type'));
+        if($request->has('type')){
+            $query->where('type','=',  $request->type ,'AND', 'user_id','=', Auth::user()->id  );
+            $product=$query->get();
+        }
+        else{
+            $query->where('user_id','=',  Auth::user()->id );
+            $product = $query->get();
+        }
         return view('seller.products.index')->with('product', $product);
 
     }
@@ -55,13 +64,16 @@ class ProductController extends Controller
         $product->name = $request->name;
         $product->description = $request->description;
         $product->price = $request->price;
+        $product->type=$request->type;
 
         if ($request->hasFile('product_image')){
             $file = $request->file('product_image');
             $extension = $file->getClientOriginalExtension();
             $filename = time(). '.' .$extension;
-            $file->move(public_path().'\assets\images\product-images', $filename);
+            $file->move(public_path().'/assets/images/product-images', $filename);
             $product->product_image = $filename;
+            $product->user_id = Auth::id();
+
         }else{
             $product->product_image = '';
         }
@@ -69,7 +81,7 @@ class ProductController extends Controller
         $product->save();
 
         Session::put('Success', 'The product has been added successfully');
-        return redirect('/user/products');
+        return redirect('/seller/products');
     }
 
     /**
@@ -119,7 +131,7 @@ class ProductController extends Controller
         $product->update();
 
         Session::put('Success', 'The product has been edited successfully');
-        return redirect('/user/products');
+        return redirect('/seller/products');
     }
 
     /**
@@ -132,12 +144,16 @@ class ProductController extends Controller
     public function destroy(Product $product)
     {
         $product ->delete();
-        return redirect('/user/products');
+        return redirect('/seller/products');
     }
 
     function viewProduct(Product $data){
         $data = Product::all();
         return view('welcome',compact('data'));
+    }
+    public function modelFilter()
+    {
+        return $this->provideFilter(\App\ModelFilters\CustomFilters\ProductFilter::class);
     }
 
 }

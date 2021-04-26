@@ -18,7 +18,7 @@
 </div>
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Bustani</a>
+      <a class="navbar-brand" href="/">Bustani</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="oi oi-menu"></span> Menu
       </button>
@@ -49,14 +49,19 @@
                                 </a>
 
                                 <div class="dropdown-menu " aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="/user/profile">Profile</a>
-                                <a class="dropdown-item" href="/user/products">My Products</a>
+                                <a class="dropdown-item" href="/seller/profile">Profile</a>
+                                <?php if(Auth::user()->hasRole('seller')): ?>
+                                    <a class='dropdown-item' href='/seller/products'>My Products</a>
+                                <?php endif; ?>
                                     <a class="dropdown-item" href="<?php echo e(route('logout')); ?>"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         <?php echo e(__('Logout')); ?>
 
                                     </a>
+
+
+
 
 
                                     <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" class="d-none">

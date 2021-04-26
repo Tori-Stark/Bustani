@@ -1,5 +1,5 @@
 @extends('layouts.profile')
- 
+
 @section('content')
 <div class="content">
 <div class="container d-flex justify-content-center">

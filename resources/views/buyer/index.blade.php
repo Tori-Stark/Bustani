@@ -18,11 +18,13 @@
           <div class="row justify-content-center">
               <div class="col-md-10 mb-5 text-center">
                   <ul class="product-category">
-                      <li><a href="#" class="active">All</a></li>
-                      <li><a href="#">Vegetables</a></li>
-                      <li><a href="#">Fruits</a></li>
+                  <ul class="product-category">
+                      <li><a href={{"/products"}} >All</a></li>
+                      <li><a href={{"/products?type=vegetables"}}>Vegetables</a></li>
+                      <li><a href={{"/products?type=fruit"}}>Fruits</a></li>
                       {{-- <li><a href="#">Juice</a></li> --}}
-                      <li><a href="#">Dried</a></li>
+                      <li><a href={{"/products?type=dried"}}>Dried</a></li>
+                  </ul>
                   </ul>
               </div>
           </div>
@@ -33,7 +35,7 @@
                   <div class="product">
 
 
-                      <a href="/products/{{ $product->id }}" class="img-prod"><img class="img-fluid" src={{ productImage($product->product_image) }} alt="Product Image">
+                      <a href="/products/{{ $product->id }}" class="img-prod"><img class="img-fluid" src={{ asset("assets/images/product-images/" . $product->product_image) }} alt="Product Image">
                           <div class="overlay"></div>
                       </a>
                       <div class="text py-3 pb-4 px-3 text-center">
