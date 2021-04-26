@@ -143,6 +143,7 @@
 
     	<div class="container">
 			<div class="row">
+
 			<?php $__currentLoopData = $data; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
     			<div class="col-md-6 col-lg-3 ftco-animate">
     				<div class="product">
@@ -179,8 +180,12 @@
 						</div>
 			</div>
 			<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+<<<<<<< HEAD
+		</div>				
+=======
 		</div>
 
+>>>>>>> 23166e966fe559a1a8059dd45d6d16f6ada85998
     </section>
 
 		<section class="ftco-section img" style="background-image: url(assets/images/bg_3.jpg);">
@@ -189,7 +194,11 @@
           <div class="col-md-6 heading-section ftco-animate deal-of-the-day ftco-animate">
           	<span class="subheading">Best Price For You</span>
             <h2 class="mb-4">Deal of the day</h2>
+<<<<<<< HEAD
+            <p>Far far away, behind the word mountains, far from the countries Nigeria and Consonantia</p>
+=======
             <p>For the best deals and offers</p>
+>>>>>>> 23166e966fe559a1a8059dd45d6d16f6ada85998
             <h3><a href="#">Spinach</a></h3>
             <span class="price">Ksh. 50 <a href="#">now Ksh. 45 only</a></span>
             <div id="timer" class="d-flex mt-5">
