@@ -47,20 +47,16 @@
                                   <a href=<?php echo e(route('products.edit', $product)); ?>  class="add-to-cart d-flex justify-content-center align-items-center text-center">
                                       <span><i class="ion-ios-menu"></i></span>
                                   </a>
-                                <a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
-                                      <span><i class="ion-ios-cart"></i></span>
-                                  </a>
+                              
                                   <form action=<?php echo e(route('products.destroy', $product)); ?> method="post">
                   <?php echo csrf_field(); ?>
                   <?php echo method_field('DELETE'); ?>
-                  <button href="#" class="buy-now d-flex justify-content-center align-items-center mx-1" type="submit">
-                                      <span><i class="ion-ios-cart"></i></span>
+                  <button href="#" class="buy-now d-flex justify-content-center align-items-center mx-1" type="submit" style="color: red">
+                                      <span><i class="ion-ios-trash"></i></span>
                   </button>
 
                 </form>
-                                  <a href="#" class="heart d-flex justify-content-center align-items-center ">
-                                      <span><i class="ion-ios-heart"></i></span>
-                                  </a>
+                                  
                               </div>
                           </div>
                       </div>

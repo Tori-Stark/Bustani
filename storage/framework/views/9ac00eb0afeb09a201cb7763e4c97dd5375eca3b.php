@@ -19,6 +19,11 @@
               </div>
               <div class="col-lg-6 product-details pl-md-5 ftco-animate">
                   <h3><?php echo e($product->name); ?></h3>
+                  <div class="comment mt-4 text-justify"> <img src=<?php echo e(userImage($seller->profile_photo)); ?> alt="" class="rounded-circle" width="40" height="40">
+                    <h4><?php echo e($seller->name); ?></h4> <span>- <?php echo e($seller->phone_number); ?></span> <br>
+                    <h4></h4> <span>- <?php echo e($seller->email); ?></span> <br>
+
+                </div>
                   <div class="rating d-flex">
                           <p class="text-left mr-4">
                               <a href="#" class="mr-2"><?php echo e($productRating[0]->rating_average); ?></a>
@@ -35,16 +40,8 @@
                               <a href="#" class="mr-2" style="color: #000;">500 <span style="color: #bbb;">Sold</span></a>
                           </p>
                       </div>
-                  <div class="d-flex">
-                    <div class="pricing">
-                      <p class="price"><span>Ksh. <?php echo e($product->price); ?></span></p>
-                    </div>
-                  </div>
+                  <p class="price"><span><?php echo e($product->price); ?></span>kshs</p>
                   <p><?php echo e($product->description); ?></p>
-
-                  <p><a href="#" class="btn btn-secondary py-3 px-5">Contact goes here</a></p>
-                  <p><a href="#" class="btn btn-secondary py-3 px-5">Email goes here</a></p>
-
 
 
 
@@ -85,8 +82,7 @@
 
                     <?php else: ?>
 
-                    <a href="/login" class="btn btn-primary" style="margin-bottom:10px;">Login to leave a comment</a>
-
+                    <a href="/login" class="btn btn-primary">Login to post a comment</a>
 
                     <?php endif; ?>
                 </form>
